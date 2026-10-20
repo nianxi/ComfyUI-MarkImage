@@ -8,24 +8,20 @@
 
 因此，为了获得更高效、更精确的局部重绘效果，有必要对官流做一定优化处理。
 
-
-
 二、想法
 
-为达到优化工作流的目的，恰巧遇到了2个和适合放在一起配合的节点。
+为达到优化工作流的目的，恰巧遇到了2个适合放在一起做配合的节点。
 
 - 以前搭建过ACE工作流的朋友，应该很熟悉 [Inpaint-CropAndStitch](https://github.com/lquesada/ComfyUI-Inpaint-CropAndStitch) 里面的裁切+局部放大的节点；
-- flux3 image官流里面有个"创建边界框"的节点，在comfyUI的左侧栏开启node2.0后就能使用，它可以给当前图片绘制遮罩、并输入对应的提示词，体验上很不错
+- flux3 image官流里面有个"创建边界框"的节点，在comfyUI的左侧栏开启node2.0后就能使用，它可以给当前图片绘制遮罩、输入对应的提示词，体验上很不错；
 
-但是，"创建边界框”节点无法与"CropAndStitch"节点更好的融合，因此，让AI编写了当前这个项目节点"标记图像"。以便让两者相互配合，共同来优化qwen工作流。
+但是，"创建边界框”节点无法与"CropAndStitch"节点很好的融合，因此，让AI编写了当前这个项目节点「标记图像」。以便让两者相互配合，共同优化qwen image 2.1的图片编辑工作流。
 
-以下这张图是本次工作流跑出来的亮点图，很多人看到的第一反应，觉得很抢眼。
+以下这张图是本次工作流跑出来的，很多人看到的第一反应是觉得眼前一亮。
 
 ![标记、裁剪放大、循环局部编辑](docs/preview.png)
 
-图中1是原图，**2**是在「标记图像」中为每个角色进行画框和填写提示词，2是全部裁剪图在经过循环编辑后出的结果。
-
-
+图中1是原图，**2**是在「标记图像」中为每个角色进行画框和填写提示词，3是全部裁剪图在经过循环编辑后出的结果。
 
 ## 功能
 
@@ -33,6 +29,8 @@
 - 每个框可自行分配颜色，方便视觉上做区分。
 - 每个框单独输出一张与裁剪图相同尺寸的遮罩，坐标、描述和颜色。
 - 给出全部遮罩的最大宽高，用来决定裁剪后要放大到多大。
+
+
 
 ## 安装
 
@@ -50,6 +48,8 @@ git clone https://github.com/nianxi/ComfyUI-MarkImage.git
 在节点菜单的 **image** 分类下可以找到「标记图像」。
 
 ## 节点
+
+
 
 ### 标记图像（`MarkImage`）
 
@@ -108,16 +108,12 @@ git clone https://github.com/nianxi/ComfyUI-MarkImage.git
 7. Inpaint Stitch 把这一块贴回整图，作为下一轮的输入。
 8. 全部框处理完后保存，并可与原图对比。
 
-
-
 加载示例前，还需要这些自定义节点：
 
 - [ComfyUI-Inpaint-CropAndStitch](https://github.com/lquesada/ComfyUI-Inpaint-CropAndStitch)：裁剪与缝回
 - [ComfyUI_essentials](https://github.com/cubiq/ComfyUI_essentials)：`SimpleMath+`
 - [ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes)：`INT Constant`
 - [ComfyUI-Apt_Preset](https://github.com/cardenluo/ComfyUI-Apt_Preset)：`math_calculate`，用来计算裁剪边长
-
-
 
 示例工作流使用 Qwen Image 2.1 Turbo，以下是模型下载的官方地址：
 
@@ -126,8 +122,6 @@ git clone https://github.com/nianxi/ComfyUI-MarkImage.git
 - 主模型：[qwen_image_2.1_turbo_int8_convrot.safetensors](https://www.modelscope.cn/models/Comfy-Org/Qwen-Image-2.1/file/view/master/diffusion_models%2Fqwen_image_2.1_turbo_int8_convrot.safetensors)
 - 编码器：[qwen3vl_8b_int8_convrot.safetensors](https://www.modelscope.cn/models/Comfy-Org/Qwen-Image-2.1/file/view/master/text_encoders%2Fqwen3vl_8b_int8_convrot.safetensors) 或 [qwen3vl_8b_w4a8.safetensors](https://www.modelscope.cn/models/Comfy-Org/Qwen-Image-2.1/file/view/master/text_encoders%2Fqwen3vl_8b_w4a8.safetensors)
 - VAE：[qwen_image_2.1_vae_bf16.safetensors](https://www.modelscope.cn/models/Comfy-Org/Qwen-Image-2.1/file/view/master/vae%2Fqwen_image_2.1_vae_bf16.safetensors)
-
-
 
 Hugging Face [Comfy-Org/Qwen-Image-2.1](https://huggingface.co/Comfy-Org/Qwen-Image-2.1)：
 
@@ -148,8 +142,6 @@ Hugging Face [Comfy-Org/Qwen-Image-2.1](https://huggingface.co/Comfy-Org/Qwen-Im
 - 右侧袋鼠的眼睛呈月牙形，左耳朵下垂，左手比出剪刀手；
 
 框尽量贴住要改的对象，并留出一点周围画面，裁剪放大后模型才有足够的上下文。
-
-
 
 ## 许可
 

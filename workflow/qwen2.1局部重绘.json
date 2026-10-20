@@ -1,0 +1,4354 @@
+{
+  "id": "54bb395d-3e60-4c94-b525-85523901575b",
+  "revision": 0,
+  "last_node_id": 1055,
+  "last_link_id": 1736,
+  "nodes": [
+    {
+      "id": 1037,
+      "type": "LoadImage",
+      "pos": [
+        130.76893759234315,
+        1634.553247978928
+      ],
+      "size": [
+        388.9258716281068,
+        351.8051848916639
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            1694,
+            1707,
+            1721
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.36.0",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        },
+        "image": "clipspace-painted-masked-1792289429969.png [input]"
+      },
+      "widgets_values": [
+        "黄色集结令.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "黄色集结令.png",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 1038,
+      "type": "MarkImage",
+      "pos": [
+        538.8316948537793,
+        1635.5087809520974
+      ],
+      "size": [
+        409.1933847890217,
+        605.7522814941101
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "background",
+          "type": "IMAGE",
+          "link": 1694
+        }
+      ],
+      "outputs": [
+        {
+          "name": "图像",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "masks",
+          "type": "MASK",
+          "links": [
+            1716
+          ]
+        },
+        {
+          "name": "maxMaskW",
+          "type": "INT",
+          "links": [
+            1702
+          ]
+        },
+        {
+          "name": "maxMaskH",
+          "type": "INT",
+          "links": [
+            1703
+          ]
+        },
+        {
+          "name": "array",
+          "type": "ARRAY",
+          "links": [
+            1715
+          ]
+        },
+        {
+          "name": "length",
+          "type": "INT",
+          "links": [
+            1708
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_fearnworksnodes",
+        "ver": "0.1.2",
+        "Node name for S&R": "MarkImage"
+      },
+      "widgets_values": [
+        1920,
+        1088,
+        [
+          {
+            "x": 0,
+            "y": 96,
+            "width": 640,
+            "height": 928,
+            "metadata": {
+              "type": "obj",
+              "text": "",
+              "desc": "牛鼻子、鼻孔变浅褐色，牛角变紫色，脸上戴着黑色墨镜，右手朝镜头方向伸出拳头",
+              "palette": [
+                "#FF0000"
+              ]
+            }
+          },
+          {
+            "x": 480,
+            "y": 32,
+            "width": 416,
+            "height": 928,
+            "metadata": {
+              "type": "obj",
+              "text": "",
+              "desc": "中间的动物身体变粉色，加上腮红，头上戴着绿帽子",
+              "palette": [
+                "#0000FF"
+              ]
+            }
+          },
+          {
+            "x": 768,
+            "y": 64,
+            "width": 448,
+            "height": 960,
+            "metadata": {
+              "type": "obj",
+              "text": "",
+              "desc": "猫咪的两只耳朵竖起来，一只眼睛在wink，另一只眼睛囧囧有神，左脚朝后退一步，右脚向前迈一步，双手向前伸出，每只手的手势看起来是一半爱心的形状，刚好朝着镜头比出了一个完整爱心的形状",
+              "palette": [
+                "#00C853"
+              ]
+            }
+          },
+          {
+            "x": 1024,
+            "y": 128,
+            "width": 512,
+            "height": 800,
+            "metadata": {
+              "type": "obj",
+              "text": "",
+              "desc": "去掉头上的橘子，裤子变迷彩色的泳裤，露出轻蔑一笑",
+              "palette": [
+                "#9C27B0"
+              ]
+            }
+          },
+          {
+            "x": 1376,
+            "y": 0,
+            "width": 480,
+            "height": 960,
+            "metadata": {
+              "type": "obj",
+              "text": "",
+              "desc": "右侧袋鼠的眼睛呈月牙形，左耳朵下垂，右手下垂，左手比出剪刀手",
+              "palette": [
+                "#FF9800"
+              ]
+            }
+          }
+        ],
+        []
+      ],
+      "widgets_values_named": {
+        "width": 1920,
+        "height": 1088,
+        "editor_state": [
+          {
+            "x": 0,
+            "y": 96,
+            "width": 640,
+            "height": 928,
+            "metadata": {
+              "type": "obj",
+              "text": "",
+              "desc": "牛鼻子、鼻孔变浅褐色，牛角变紫色，脸上戴着黑色墨镜，右手朝镜头方向伸出拳头",
+              "palette": [
+                "#FF0000"
+              ]
+            }
+          },
+          {
+            "x": 480,
+            "y": 32,
+            "width": 416,
+            "height": 928,
+            "metadata": {
+              "type": "obj",
+              "text": "",
+              "desc": "中间的动物身体变粉色，加上腮红，头上戴着绿帽子",
+              "palette": [
+                "#0000FF"
+              ]
+            }
+          },
+          {
+            "x": 768,
+            "y": 64,
+            "width": 448,
+            "height": 960,
+            "metadata": {
+              "type": "obj",
+              "text": "",
+              "desc": "猫咪的两只耳朵竖起来，一只眼睛在wink，另一只眼睛囧囧有神，左脚朝后退一步，右脚向前迈一步，双手向前伸出，每只手的手势看起来是一半爱心的形状，刚好朝着镜头比出了一个完整爱心的形状",
+              "palette": [
+                "#00C853"
+              ]
+            }
+          },
+          {
+            "x": 1024,
+            "y": 128,
+            "width": 512,
+            "height": 800,
+            "metadata": {
+              "type": "obj",
+              "text": "",
+              "desc": "去掉头上的橘子，裤子变迷彩色的泳裤，露出轻蔑一笑",
+              "palette": [
+                "#9C27B0"
+              ]
+            }
+          },
+          {
+            "x": 1376,
+            "y": 0,
+            "width": 480,
+            "height": 960,
+            "metadata": {
+              "type": "obj",
+              "text": "",
+              "desc": "右侧袋鼠的眼睛呈月牙形，左耳朵下垂，右手下垂，左手比出剪刀手",
+              "palette": [
+                "#FF9800"
+              ]
+            }
+          }
+        ],
+        "last_incoming": []
+      }
+    },
+    {
+      "id": 1039,
+      "type": "InpaintCropImproved",
+      "pos": [
+        971.077646700395,
+        1644.533248749286
+      ],
+      "size": [
+        260.3281706408002,
+        761.9999133273301
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 1695
+        },
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": 1696
+        },
+        {
+          "label": "上下文遮罩(可选)",
+          "name": "optional_context_mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "label": "降采样算法",
+          "name": "downscale_algorithm",
+          "type": "COMBO",
+          "widget": {
+            "name": "downscale_algorithm"
+          },
+          "link": null
+        },
+        {
+          "label": "上采样算法",
+          "name": "upscale_algorithm",
+          "type": "COMBO",
+          "widget": {
+            "name": "upscale_algorithm"
+          },
+          "link": null
+        },
+        {
+          "label": "预缩放",
+          "name": "preresize",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "preresize"
+          },
+          "link": null
+        },
+        {
+          "label": "预缩放模式",
+          "name": "preresize_mode",
+          "type": "COMBO",
+          "widget": {
+            "name": "preresize_mode"
+          },
+          "link": null
+        },
+        {
+          "label": "预缩放最小宽度",
+          "name": "preresize_min_width",
+          "type": "INT",
+          "widget": {
+            "name": "preresize_min_width"
+          },
+          "link": null
+        },
+        {
+          "label": "预缩放最小高度",
+          "name": "preresize_min_height",
+          "type": "INT",
+          "widget": {
+            "name": "preresize_min_height"
+          },
+          "link": null
+        },
+        {
+          "label": "预缩放最大宽度",
+          "name": "preresize_max_width",
+          "type": "INT",
+          "widget": {
+            "name": "preresize_max_width"
+          },
+          "link": null
+        },
+        {
+          "label": "预缩放最大高度",
+          "name": "preresize_max_height",
+          "type": "INT",
+          "widget": {
+            "name": "preresize_max_height"
+          },
+          "link": null
+        },
+        {
+          "label": "遮罩孔洞填充",
+          "name": "mask_fill_holes",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "mask_fill_holes"
+          },
+          "link": null
+        },
+        {
+          "label": "遮罩像素扩展",
+          "name": "mask_expand_pixels",
+          "type": "INT",
+          "widget": {
+            "name": "mask_expand_pixels"
+          },
+          "link": 1697
+        },
+        {
+          "label": "遮罩反相",
+          "name": "mask_invert",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "mask_invert"
+          },
+          "link": null
+        },
+        {
+          "label": "遮罩像素混合",
+          "name": "mask_blend_pixels",
+          "type": "INT",
+          "widget": {
+            "name": "mask_blend_pixels"
+          },
+          "link": null
+        },
+        {
+          "label": "遮罩高通滤波",
+          "name": "mask_hipass_filter",
+          "type": "FLOAT",
+          "widget": {
+            "name": "mask_hipass_filter"
+          },
+          "link": null
+        },
+        {
+          "label": "外补扩展系数",
+          "name": "extend_for_outpainting",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "extend_for_outpainting"
+          },
+          "link": null
+        },
+        {
+          "label": "向上扩展系数",
+          "name": "extend_up_factor",
+          "type": "FLOAT",
+          "widget": {
+            "name": "extend_up_factor"
+          },
+          "link": null
+        },
+        {
+          "label": "向下扩展系数",
+          "name": "extend_down_factor",
+          "type": "FLOAT",
+          "widget": {
+            "name": "extend_down_factor"
+          },
+          "link": null
+        },
+        {
+          "label": "向左扩展系数",
+          "name": "extend_left_factor",
+          "type": "FLOAT",
+          "widget": {
+            "name": "extend_left_factor"
+          },
+          "link": null
+        },
+        {
+          "label": "向右扩展系数",
+          "name": "extend_right_factor",
+          "type": "FLOAT",
+          "widget": {
+            "name": "extend_right_factor"
+          },
+          "link": null
+        },
+        {
+          "label": "基于遮罩扩展的上下文因子",
+          "name": "context_from_mask_extend_factor",
+          "type": "FLOAT",
+          "widget": {
+            "name": "context_from_mask_extend_factor"
+          },
+          "link": null
+        },
+        {
+          "label": "输出缩放至目标尺寸",
+          "name": "output_resize_to_target_size",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "output_resize_to_target_size"
+          },
+          "link": null
+        },
+        {
+          "label": "输出目标宽度",
+          "name": "output_target_width",
+          "type": "INT",
+          "widget": {
+            "name": "output_target_width"
+          },
+          "link": 1698
+        },
+        {
+          "label": "输出目标高度",
+          "name": "output_target_height",
+          "type": "INT",
+          "widget": {
+            "name": "output_target_height"
+          },
+          "link": 1699
+        },
+        {
+          "label": "输出填充",
+          "name": "output_padding",
+          "type": "COMBO",
+          "widget": {
+            "name": "output_padding"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "拼接器",
+          "name": "stitcher",
+          "type": "STITCHER",
+          "links": [
+            1705
+          ]
+        },
+        {
+          "label": "裁剪图像",
+          "name": "cropped_image",
+          "type": "IMAGE",
+          "links": [
+            1719,
+            1723
+          ]
+        },
+        {
+          "label": "裁剪遮罩",
+          "name": "cropped_mask",
+          "type": "MASK",
+          "links": [
+            1724
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_fearnworksnodes",
+        "ver": "8584b08d851762965df898b421a39075fc5357ae",
+        "Node name for S&R": "InpaintCropImproved",
+        "aux_id": "lquesada/ComfyUI-Inpaint-CropAndStitch"
+      },
+      "widgets_values": [
+        "bicubic",
+        "lanczos",
+        false,
+        "ensure minimum resolution",
+        1024,
+        1024,
+        16384,
+        16384,
+        true,
+        32,
+        false,
+        32,
+        0.1,
+        false,
+        1,
+        1,
+        1,
+        1,
+        1.5,
+        true,
+        512,
+        512,
+        "32",
+        "cpu (compatible)"
+      ],
+      "widgets_values_named": {
+        "downscale_algorithm": "bicubic",
+        "upscale_algorithm": "lanczos",
+        "preresize": false,
+        "preresize_mode": "ensure minimum resolution",
+        "preresize_min_width": 1024,
+        "preresize_min_height": 1024,
+        "preresize_max_width": 16384,
+        "preresize_max_height": 16384,
+        "mask_fill_holes": true,
+        "mask_expand_pixels": 32,
+        "mask_invert": false,
+        "mask_blend_pixels": 32,
+        "mask_hipass_filter": 0.1,
+        "extend_for_outpainting": false,
+        "extend_up_factor": 1,
+        "extend_down_factor": 1,
+        "extend_left_factor": 1,
+        "extend_right_factor": 1,
+        "context_from_mask_extend_factor": 1.5,
+        "output_resize_to_target_size": true,
+        "output_target_width": 512,
+        "output_target_height": 512,
+        "output_padding": "32",
+        "device_mode": "cpu (compatible)"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 1040,
+      "type": "SaveImage",
+      "pos": [
+        1701.1433941860257,
+        1641.274680153345
+      ],
+      "size": [
+        482.1300167250164,
+        578.9496546428929
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 1700
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.37.0",
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "QW21-%date:yyyyMMddhhmmss%"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "QW21-%date:yyyyMMddhhmmss%"
+      }
+    },
+    {
+      "id": 1041,
+      "type": "SimpleMath+",
+      "pos": [
+        984.7419948798067,
+        2448.038155068048
+      ],
+      "size": [
+        237.98290141103828,
+        134.00000380578896
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "A",
+          "name": "a",
+          "shape": 7,
+          "type": "*",
+          "link": 1734
+        },
+        {
+          "label": "B",
+          "name": "b",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "c",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "label": "值",
+          "name": "value",
+          "type": "STRING",
+          "widget": {
+            "name": "value"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "整数",
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            1698,
+            1699
+          ]
+        },
+        {
+          "label": "浮点",
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_fearnworksnodes",
+        "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
+        "Node name for S&R": "SimpleMath+",
+        "aux_id": "cubiq/ComfyUI_essentials"
+      },
+      "widgets_values": [
+        "round(a/32)*32"
+      ],
+      "widgets_values_named": {
+        "value": "round(a/32)*32"
+      }
+    },
+    {
+      "id": 1042,
+      "type": "math_calculate",
+      "pos": [
+        988.5126327117821,
+        2527.1708182323764
+      ],
+      "size": [
+        260,
+        122
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "shape": 7,
+          "type": "*",
+          "link": 1702
+        },
+        {
+          "name": "b",
+          "shape": 7,
+          "type": "*",
+          "link": 1703
+        },
+        {
+          "name": "c",
+          "shape": 7,
+          "type": "*",
+          "link": 1704
+        }
+      ],
+      "outputs": [
+        {
+          "name": "float_result",
+          "type": "FLOAT",
+          "links": []
+        },
+        {
+          "name": "int_result",
+          "type": "INT",
+          "links": [
+            1735
+          ]
+        },
+        {
+          "name": "bool_result",
+          "type": "BOOLEAN",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_fearnworksnodes",
+        "ver": "0.1.2",
+        "Node name for S&R": "math_calculate"
+      },
+      "widgets_values": [
+        "max(a,b,c)",
+        ""
+      ],
+      "widgets_values_named": {
+        "preset": "max(a,b,c)",
+        "expression": ""
+      }
+    },
+    {
+      "id": 1043,
+      "type": "INTConstant",
+      "pos": [
+        987.8762068957152,
+        2564.459404780973
+      ],
+      "size": [
+        210,
+        86.47623634263391
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "值",
+          "name": "value",
+          "type": "INT",
+          "widget": {
+            "name": "value"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "值",
+          "name": "value",
+          "type": "INT",
+          "links": [
+            1704
+          ]
+        }
+      ],
+      "title": "重绘最小边长",
+      "properties": {
+        "cnr_id": "comfyui_fearnworksnodes",
+        "ver": "d3cfe21625e5170126ce06fbfcfe1d88108688c3",
+        "Node name for S&R": "INTConstant",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        576
+      ],
+      "widgets_values_named": {
+        "value": 576
+      },
+      "color": "#1b4669",
+      "bgcolor": "#29699c"
+    },
+    {
+      "id": 1044,
+      "type": "InpaintStitchImproved",
+      "pos": [
+        1296.2392235001316,
+        2801.37599065819
+      ],
+      "size": [
+        225,
+        102.00000055040249
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "拼接器",
+          "name": "stitcher",
+          "type": "STITCHER",
+          "link": 1705
+        },
+        {
+          "label": "修复图像",
+          "name": "inpainted_image",
+          "type": "IMAGE",
+          "link": 1706
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            1732,
+            1733
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-inpaint-cropandstitch",
+        "ver": "de6c2f6462e5997519a07305ade0b987143da12b",
+        "Node name for S&R": "InpaintStitchImproved",
+        "aux_id": "lquesada/ComfyUI-Inpaint-CropAndStitch",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 1045,
+      "type": "StartLoop",
+      "pos": [
+        1294.2953444945235,
+        2841.510910036846
+      ],
+      "size": [
+        289.177734375,
+        246
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "parent_iteration",
+          "shape": 7,
+          "type": "INT",
+          "link": null
+        },
+        {
+          "name": "initial_iteration_value",
+          "shape": 7,
+          "type": "*",
+          "link": 1707
+        },
+        {
+          "name": "mode.max_iteration",
+          "type": "INT",
+          "widget": {
+            "name": "mode.max_iteration"
+          },
+          "link": 1708
+        }
+      ],
+      "outputs": [
+        {
+          "name": "iteration_index",
+          "type": "INT",
+          "links": [
+            1717
+          ]
+        },
+        {
+          "name": "is_first",
+          "type": "BOOLEAN",
+          "links": []
+        },
+        {
+          "name": "is_last",
+          "type": "BOOLEAN",
+          "links": []
+        },
+        {
+          "name": "list_item",
+          "type": "*",
+          "links": []
+        },
+        {
+          "name": "current_iteration_value",
+          "type": "IMAGE",
+          "links": [
+            1695
+          ]
+        }
+      ],
+      "title": "Start Loop",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.41.0",
+        "Node name for S&R": "StartLoop"
+      },
+      "widgets_values": [
+        "For",
+        0,
+        4,
+        1,
+        false
+      ],
+      "widgets_values_named": {
+        "mode": "For",
+        "mode.start_iteration_index": 0,
+        "mode.max_iteration": 4,
+        "mode.step": 1,
+        "cache_iterations": false
+      }
+    },
+    {
+      "id": 1046,
+      "type": "EndLoop",
+      "pos": [
+        1547.42249809996,
+        2583.888830347025
+      ],
+      "size": [
+        260,
+        120
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "output_value",
+          "shape": 7,
+          "type": "*",
+          "link": 1733
+        },
+        {
+          "name": "next_iteration_value",
+          "shape": 7,
+          "type": "*",
+          "link": 1730
+        },
+        {
+          "name": "terminations.termination0",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "terminations.termination",
+          "shape": 7,
+          "type": "*",
+          "link": 1731
+        }
+      ],
+      "outputs": [
+        {
+          "name": "outputs",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            1700,
+            1720
+          ]
+        }
+      ],
+      "title": "End Loop",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.41.0",
+        "Node name for S&R": "EndLoop"
+      },
+      "widgets_values": [
+        false
+      ],
+      "widgets_values_named": {
+        "accumulate": false
+      }
+    },
+    {
+      "id": 1047,
+      "type": "StringFormat",
+      "pos": [
+        1282.0973413149784,
+        2885.2943244071002
+      ],
+      "size": [
+        245.09375,
+        193
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "values.a",
+          "shape": 7,
+          "type": "*",
+          "link": 1712
+        },
+        {
+          "name": "values.b",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "values.c",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "f_string",
+          "type": "STRING",
+          "widget": {
+            "name": "f_string"
+          },
+          "link": 1713
+        },
+        {
+          "name": "values.d",
+          "shape": 7,
+          "type": "*",
+          "link": 1714
+        },
+        {
+          "name": "values.e",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            1718
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.41.0",
+        "Node name for S&R": "StringFormat"
+      },
+      "widgets_values": [
+        "执行命令{b}",
+        [
+          false,
+          true
+        ]
+      ],
+      "widgets_values_named": {
+        "f_string": "执行命令{b}",
+        "speak_and_recognation": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "id": 1048,
+      "type": "MarkImageGetBox",
+      "pos": [
+        1549.373191233363,
+        2751.40174212737
+      ],
+      "size": [
+        254.76726212629706,
+        241.99997953984007
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "array",
+          "type": "ARRAY",
+          "link": 1715
+        },
+        {
+          "name": "masks",
+          "shape": 7,
+          "type": "MASK",
+          "link": 1716
+        },
+        {
+          "name": "index",
+          "type": "INT",
+          "widget": {
+            "name": "index"
+          },
+          "link": 1717
+        }
+      ],
+      "outputs": [
+        {
+          "name": "color",
+          "type": "STRING",
+          "links": [
+            1712
+          ]
+        },
+        {
+          "name": "desc",
+          "type": "STRING",
+          "links": [
+            1713,
+            1714
+          ]
+        },
+        {
+          "name": "id",
+          "type": "INT",
+          "links": []
+        },
+        {
+          "name": "x",
+          "type": "INT",
+          "links": []
+        },
+        {
+          "name": "y",
+          "type": "INT",
+          "links": []
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": []
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": []
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": [
+            1696
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_fearnworksnodes",
+        "ver": "0.1.2",
+        "Node name for S&R": "MarkImageGetBox"
+      },
+      "widgets_values": [
+        0
+      ],
+      "widgets_values_named": {
+        "index": 0
+      }
+    },
+    {
+      "id": 1049,
+      "type": "eec83aae-129a-4ca8-841b-dfd9f0743fbf",
+      "pos": [
+        1272.611984671137,
+        1643.1726782152869
+      ],
+      "size": [
+        394.54701660549034,
+        821.9998842674489
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "positive_prompt",
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 1718
+        },
+        {
+          "label": "refine_prompt",
+          "name": "switch_1",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "switch_1"
+          },
+          "link": null
+        },
+        {
+          "label": "custom_size",
+          "name": "switch",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "switch"
+          },
+          "link": null
+        },
+        {
+          "label": "sampler",
+          "name": "scheduler",
+          "type": "COMBO",
+          "widget": {
+            "name": "scheduler"
+          },
+          "link": null
+        },
+        {
+          "label": "cache_device",
+          "name": "device",
+          "type": "COMBO",
+          "widget": {
+            "name": "device"
+          },
+          "link": null
+        },
+        {
+          "label": "dtype",
+          "name": "dtype",
+          "type": "COMBO",
+          "widget": {
+            "name": "dtype"
+          },
+          "link": null
+        },
+        {
+          "label": "image_1",
+          "name": "images.image_1",
+          "type": "IMAGE",
+          "link": 1719
+        },
+        {
+          "label": "image_2",
+          "name": "images.image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "image_3",
+          "name": "images.image_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "image_4",
+          "name": "images.image_4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "image_5",
+          "name": "images.image_5_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "image_6",
+          "name": "images.image_6",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "image_7",
+          "name": "images.image_7",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "image_8",
+          "name": "images.image_8",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "image_9",
+          "name": "images.image_9",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "image_10",
+          "name": "images.image_10",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            1722
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.41.0",
+        "previewExposures": []
+      },
+      "widgets_values": [
+        0,
+        "",
+        true,
+        false,
+        4096,
+        "",
+        1,
+        false,
+        1024,
+        1024,
+        "euler",
+        891836227295376,
+        "qwen\\qwen_image_2.1_turbo_int8_convrot.safetensors",
+        "qwen3vl_8b_int8_convrot.safetensors",
+        "qwen\\qwen_image_2.1_vae_bf16.safetensors",
+        "auto",
+        "default"
+      ],
+      "widgets_values_named": {
+        "resolution": 0,
+        "prompt": "",
+        "switch_1": true,
+        "thinking": false,
+        "max_length": 4096,
+        "negative_prompt": "",
+        "cfg": 1,
+        "switch": false,
+        "width": 1024,
+        "height": 1024,
+        "scheduler": "euler",
+        "seed": 891836227295376,
+        "unet_name": "qwen\\qwen_image_2.1_turbo_int8_convrot.safetensors",
+        "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+        "vae_name": "qwen\\qwen_image_2.1_vae_bf16.safetensors",
+        "device": "auto",
+        "dtype": "default"
+      }
+    },
+    {
+      "id": 1050,
+      "type": "ImageCompare",
+      "pos": [
+        2209.540547026281,
+        1655.7004690537588
+      ],
+      "size": [
+        479.85994482421853,
+        546.9879719543454
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image_a",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 1720
+        },
+        {
+          "name": "image_b",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 1721
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.41.0",
+        "Node name for S&R": "ImageCompare"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
+    },
+    {
+      "id": 1051,
+      "type": "MarkImageBorderColor",
+      "pos": [
+        1271.7602291712706,
+        2583.1224649866062
+      ],
+      "size": [
+        270,
+        170
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 1722
+        },
+        {
+          "name": "reference",
+          "type": "IMAGE",
+          "link": 1723
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": 1724
+        },
+        {
+          "name": "border",
+          "type": "INT",
+          "widget": {
+            "name": "border"
+          },
+          "link": 1725
+        }
+      ],
+      "outputs": [
+        {
+          "name": "图像",
+          "type": "IMAGE",
+          "links": [
+            1706
+          ]
+        }
+      ],
+      "title": "边缘校色",
+      "properties": {
+        "cnr_id": "comfyui_fearnworksnodes",
+        "ver": "0.1.2",
+        "Node name for S&R": "MarkImageBorderColor"
+      },
+      "widgets_values": [
+        32,
+        1
+      ],
+      "widgets_values_named": {
+        "border": 32,
+        "strength": 1
+      }
+    },
+    {
+      "id": 1052,
+      "type": "INTConstant",
+      "pos": [
+        987.7563090273824,
+        2817.251180890673
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "value",
+          "type": "INT",
+          "links": [
+            1697,
+            1725
+          ]
+        }
+      ],
+      "title": "遮罩扩展",
+      "properties": {
+        "cnr_id": "comfyui_fearnworksnodes",
+        "ver": "0.1.2",
+        "Node name for S&R": "INTConstant"
+      },
+      "widgets_values": [
+        32
+      ],
+      "widgets_values_named": {
+        "value": 32
+      },
+      "color": "#1b4669",
+      "bgcolor": "#29699c"
+    },
+    {
+      "id": 1053,
+      "type": "PreviewImage",
+      "pos": [
+        126.923504857799,
+        1976.4969362341492
+      ],
+      "size": [
+        399.9543168233015,
+        266.0000061039331
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 1732
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            1730,
+            1731
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.41.0",
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 1054,
+      "type": "INTConstant",
+      "pos": [
+        987.561589112931,
+        2692.0907072397968
+      ],
+      "size": [
+        210,
+        86.47623634263391
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "值",
+          "name": "value",
+          "type": "INT",
+          "widget": {
+            "name": "value"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "值",
+          "name": "value",
+          "type": "INT",
+          "links": [
+            1736
+          ]
+        }
+      ],
+      "title": "重绘最大边长",
+      "properties": {
+        "cnr_id": "comfyui_fearnworksnodes",
+        "ver": "d3cfe21625e5170126ce06fbfcfe1d88108688c3",
+        "Node name for S&R": "INTConstant",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        2176
+      ],
+      "widgets_values_named": {
+        "value": 2176
+      },
+      "color": "#1b4669",
+      "bgcolor": "#29699c"
+    },
+    {
+      "id": 1055,
+      "type": "math_calculate",
+      "pos": [
+        985.5310771530357,
+        2487.008999290367
+      ],
+      "size": [
+        260,
+        122
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "shape": 7,
+          "type": "*",
+          "link": 1735
+        },
+        {
+          "name": "b",
+          "shape": 7,
+          "type": "*",
+          "link": 1736
+        },
+        {
+          "name": "c",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "float_result",
+          "type": "FLOAT",
+          "links": []
+        },
+        {
+          "name": "int_result",
+          "type": "INT",
+          "links": [
+            1734
+          ]
+        },
+        {
+          "name": "bool_result",
+          "type": "BOOLEAN",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_fearnworksnodes",
+        "ver": "0.1.2",
+        "Node name for S&R": "math_calculate"
+      },
+      "widgets_values": [
+        "min(a,b)",
+        ""
+      ],
+      "widgets_values_named": {
+        "preset": "min(a,b)",
+        "expression": ""
+      }
+    }
+  ],
+  "links": [
+    [
+      1694,
+      1037,
+      0,
+      1038,
+      0,
+      "IMAGE"
+    ],
+    [
+      1695,
+      1045,
+      4,
+      1039,
+      0,
+      "IMAGE"
+    ],
+    [
+      1696,
+      1048,
+      8,
+      1039,
+      1,
+      "MASK"
+    ],
+    [
+      1697,
+      1052,
+      0,
+      1039,
+      12,
+      "INT"
+    ],
+    [
+      1698,
+      1041,
+      0,
+      1039,
+      23,
+      "INT"
+    ],
+    [
+      1699,
+      1041,
+      0,
+      1039,
+      24,
+      "INT"
+    ],
+    [
+      1700,
+      1046,
+      0,
+      1040,
+      0,
+      "IMAGE"
+    ],
+    [
+      1702,
+      1038,
+      2,
+      1042,
+      0,
+      "INT"
+    ],
+    [
+      1703,
+      1038,
+      3,
+      1042,
+      1,
+      "INT"
+    ],
+    [
+      1704,
+      1043,
+      0,
+      1042,
+      2,
+      "INT"
+    ],
+    [
+      1705,
+      1039,
+      0,
+      1044,
+      0,
+      "STITCHER"
+    ],
+    [
+      1706,
+      1051,
+      0,
+      1044,
+      1,
+      "IMAGE"
+    ],
+    [
+      1715,
+      1038,
+      4,
+      1048,
+      0,
+      "ARRAY"
+    ],
+    [
+      1716,
+      1038,
+      1,
+      1048,
+      1,
+      "MASK"
+    ],
+    [
+      1717,
+      1045,
+      0,
+      1048,
+      2,
+      "INT"
+    ],
+    [
+      1718,
+      1047,
+      0,
+      1049,
+      0,
+      "STRING"
+    ],
+    [
+      1719,
+      1039,
+      1,
+      1049,
+      6,
+      "IMAGE"
+    ],
+    [
+      1720,
+      1046,
+      0,
+      1050,
+      0,
+      "IMAGE"
+    ],
+    [
+      1721,
+      1037,
+      0,
+      1050,
+      1,
+      "IMAGE"
+    ],
+    [
+      1722,
+      1049,
+      0,
+      1051,
+      0,
+      "IMAGE"
+    ],
+    [
+      1723,
+      1039,
+      1,
+      1051,
+      1,
+      "IMAGE"
+    ],
+    [
+      1724,
+      1039,
+      2,
+      1051,
+      2,
+      "MASK"
+    ],
+    [
+      1725,
+      1052,
+      0,
+      1051,
+      3,
+      "INT"
+    ],
+    [
+      1730,
+      1053,
+      0,
+      1046,
+      1,
+      "IMAGE"
+    ],
+    [
+      1731,
+      1053,
+      0,
+      1046,
+      3,
+      "IMAGE"
+    ],
+    [
+      1732,
+      1044,
+      0,
+      1053,
+      0,
+      "IMAGE"
+    ],
+    [
+      1733,
+      1044,
+      0,
+      1046,
+      0,
+      "IMAGE"
+    ],
+    [
+      1734,
+      1055,
+      1,
+      1041,
+      0,
+      "INT"
+    ],
+    [
+      1735,
+      1042,
+      1,
+      1055,
+      0,
+      "INT"
+    ],
+    [
+      1736,
+      1054,
+      0,
+      1055,
+      1,
+      "INT"
+    ],
+    [
+      1707,
+      1037,
+      0,
+      1045,
+      1,
+      "IMAGE"
+    ],
+    [
+      1708,
+      1038,
+      5,
+      1045,
+      2,
+      "INT"
+    ],
+    [
+      1712,
+      1048,
+      0,
+      1047,
+      0,
+      "STRING"
+    ],
+    [
+      1714,
+      1048,
+      1,
+      1047,
+      4,
+      "STRING"
+    ],
+    [
+      1713,
+      1048,
+      1,
+      1047,
+      3,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 73,
+      "title": "采样",
+      "bounding": [
+        1259.6733878570305,
+        1572.8425950697492,
+        424.2792187525422,
+        921.202668408516
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 74,
+      "title": "保存",
+      "bounding": [
+        1693.4096275646295,
+        1574.4528561414904,
+        499.717579818423,
+        657.1832076177432
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 75,
+      "title": "局部裁剪",
+      "bounding": [
+        968.3816693622705,
+        1568.7626539862945,
+        270.7859495243076,
+        1344.4984636520771
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 76,
+      "title": "输入",
+      "bounding": [
+        134.715460718023,
+        1572.2380726729475,
+        385.33457704240004,
+        613.3972172568776
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 77,
+      "title": "标记",
+      "bounding": [
+        532.2295993115263,
+        1570.153650620517,
+        425.42151387268063,
+        965.7758557748002
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 78,
+      "title": "循环",
+      "bounding": [
+        1262.8712715231484,
+        2513.9747248552353,
+        557.43277660582,
+        556.8752044563776
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    }
+  ],
+  "definitions": {
+    "subgraphs": [
+      {
+        "id": "eec83aae-129a-4ca8-841b-dfd9f0743fbf",
+        "version": 1,
+        "state": {
+          "lastGroupId": 78,
+          "lastNodeId": 1055,
+          "lastLinkId": 1736,
+          "lastRerouteId": 9
+        },
+        "revision": 0,
+        "config": {},
+        "name": "Image Edit (Qwen Image 2.1 Turbo)",
+        "inputNode": {
+          "id": -10,
+          "bounding": [
+            -720,
+            630,
+            143.044921875,
+            588
+          ]
+        },
+        "outputNode": {
+          "id": -20,
+          "bounding": [
+            1960,
+            640,
+            128,
+            68
+          ]
+        },
+        "inputs": [
+          {
+            "id": "1f3911c3-71b5-45b7-9a0e-4ac7285069dc",
+            "name": "resolution",
+            "type": "INT",
+            "linkIds": [
+              725
+            ],
+            "pos": [
+              -600.955078125,
+              654
+            ]
+          },
+          {
+            "id": "6a73de3b-f4cd-43a4-9076-76648c6902f0",
+            "name": "prompt",
+            "type": "STRING",
+            "linkIds": [
+              739,
+              802
+            ],
+            "localized_name": "prompt",
+            "label": "positive_prompt",
+            "pos": [
+              -600.955078125,
+              674
+            ]
+          },
+          {
+            "id": "57887da4-f3f5-41b1-9fce-a7292abaef6a",
+            "name": "switch_1",
+            "type": "BOOLEAN",
+            "linkIds": [
+              741
+            ],
+            "label": "refine_prompt",
+            "pos": [
+              -600.955078125,
+              694
+            ]
+          },
+          {
+            "id": "cd079967-6ff0-46d9-8b58-d52c2cdc5de5",
+            "name": "thinking",
+            "type": "BOOLEAN",
+            "linkIds": [
+              902
+            ],
+            "pos": [
+              -600.955078125,
+              714
+            ]
+          },
+          {
+            "id": "d98ec6b1-9955-48e0-874d-b99d10218329",
+            "name": "max_length",
+            "type": "INT",
+            "linkIds": [
+              903
+            ],
+            "pos": [
+              -600.955078125,
+              734
+            ]
+          },
+          {
+            "id": "d4c1377f-7fbc-4519-b83c-9a3b9c2de104",
+            "name": "negative_prompt",
+            "type": "STRING",
+            "linkIds": [
+              727
+            ],
+            "pos": [
+              -600.955078125,
+              754
+            ]
+          },
+          {
+            "id": "420ee896-17c3-4e07-95fc-0ff309a6b836",
+            "name": "cfg",
+            "type": "FLOAT",
+            "linkIds": [
+              911
+            ],
+            "pos": [
+              -600.955078125,
+              774
+            ]
+          },
+          {
+            "id": "60df426d-f8ab-4ce2-8c82-42dc7cbf19d0",
+            "name": "switch",
+            "type": "BOOLEAN",
+            "linkIds": [
+              703
+            ],
+            "label": "custom_size",
+            "pos": [
+              -600.955078125,
+              794
+            ]
+          },
+          {
+            "id": "91c96cf8-057b-4da2-b71e-305541a3527e",
+            "name": "width",
+            "type": "INT",
+            "linkIds": [
+              660
+            ],
+            "localized_name": "width",
+            "pos": [
+              -600.955078125,
+              814
+            ]
+          },
+          {
+            "id": "661cc520-6bd0-4925-90ec-cecaa188b57d",
+            "name": "height",
+            "type": "INT",
+            "linkIds": [
+              661
+            ],
+            "localized_name": "height",
+            "pos": [
+              -600.955078125,
+              834
+            ]
+          },
+          {
+            "id": "9f0e91b8-5a4a-4f5a-a2a4-4ddc180df0fd",
+            "name": "scheduler",
+            "type": "COMBO",
+            "linkIds": [
+              915
+            ],
+            "label": "sampler",
+            "pos": [
+              -600.955078125,
+              854
+            ]
+          },
+          {
+            "id": "977ce57d-3764-491c-8d2d-543754cfbaf1",
+            "name": "seed",
+            "type": "INT",
+            "linkIds": [
+              804,
+              914
+            ],
+            "pos": [
+              -600.955078125,
+              874
+            ]
+          },
+          {
+            "id": "143494fb-a40e-423f-be3b-ecc808b408b0",
+            "name": "unet_name",
+            "type": "COMBO",
+            "linkIds": [
+              663
+            ],
+            "pos": [
+              -600.955078125,
+              894
+            ]
+          },
+          {
+            "id": "d8528289-e121-45ed-9c31-e6370ce4ba5e",
+            "name": "clip_name",
+            "type": "COMBO",
+            "linkIds": [
+              664
+            ],
+            "pos": [
+              -600.955078125,
+              914
+            ]
+          },
+          {
+            "id": "f03d1fb0-d592-4997-b55e-e7a2549c36e5",
+            "name": "vae_name",
+            "type": "COMBO",
+            "linkIds": [
+              665
+            ],
+            "pos": [
+              -600.955078125,
+              934
+            ]
+          },
+          {
+            "id": "c2d95dbf-7f92-4c0b-a138-b9b5d1472e7f",
+            "name": "device",
+            "type": "COMBO",
+            "linkIds": [
+              729
+            ],
+            "label": "cache_device",
+            "pos": [
+              -600.955078125,
+              954
+            ]
+          },
+          {
+            "id": "974d6751-be03-4afc-911f-a0d43f7cb906",
+            "name": "dtype",
+            "type": "COMBO",
+            "linkIds": [
+              730
+            ],
+            "label": "dtype",
+            "pos": [
+              -600.955078125,
+              974
+            ]
+          },
+          {
+            "id": "6bbe4c8a-0ce9-4576-9468-697a165b98b4",
+            "name": "images.image_1",
+            "type": "IMAGE",
+            "linkIds": [
+              710,
+              750
+            ],
+            "label": "image_1",
+            "pos": [
+              -600.955078125,
+              994
+            ]
+          },
+          {
+            "id": "5e9080e7-bbd0-4363-9e25-aaa201f9ff01",
+            "name": "images.image_2",
+            "type": "IMAGE",
+            "linkIds": [
+              711,
+              779
+            ],
+            "label": "image_2",
+            "pos": [
+              -600.955078125,
+              1014
+            ]
+          },
+          {
+            "id": "29bd6732-17d4-4ca7-aa9f-dc118c6c008a",
+            "name": "images.image_3",
+            "type": "IMAGE",
+            "linkIds": [
+              712,
+              780
+            ],
+            "label": "image_3",
+            "pos": [
+              -600.955078125,
+              1034
+            ]
+          },
+          {
+            "id": "c0899e22-8834-4c49-b0ec-5d2e1c9a4f9d",
+            "name": "images.image_4",
+            "type": "IMAGE",
+            "linkIds": [
+              713,
+              781
+            ],
+            "label": "image_4",
+            "pos": [
+              -600.955078125,
+              1054
+            ]
+          },
+          {
+            "id": "f4bb2fe2-583b-429d-83dc-0af6d4d3fdf8",
+            "name": "images.image_5_1",
+            "type": "IMAGE",
+            "linkIds": [
+              714,
+              782
+            ],
+            "label": "image_5",
+            "pos": [
+              -600.955078125,
+              1074
+            ]
+          },
+          {
+            "id": "4dc8dcc5-da5f-4dd4-82f4-479dabed8567",
+            "name": "images.image_6",
+            "type": "IMAGE",
+            "linkIds": [
+              715,
+              783
+            ],
+            "label": "image_6",
+            "pos": [
+              -600.955078125,
+              1094
+            ]
+          },
+          {
+            "id": "58ac7e94-91ff-4992-9022-fd67902782eb",
+            "name": "images.image_7",
+            "type": "IMAGE",
+            "linkIds": [
+              716,
+              784
+            ],
+            "label": "image_7",
+            "pos": [
+              -600.955078125,
+              1114
+            ]
+          },
+          {
+            "id": "b736a3f9-62a7-4b77-ad2b-9ed40a482949",
+            "name": "images.image_8",
+            "type": "IMAGE",
+            "linkIds": [
+              717,
+              785
+            ],
+            "label": "image_8",
+            "pos": [
+              -600.955078125,
+              1134
+            ]
+          },
+          {
+            "id": "79883453-5e79-4003-a7ef-8d9156cffcc4",
+            "name": "images.image_9",
+            "type": "IMAGE",
+            "linkIds": [
+              718,
+              786
+            ],
+            "label": "image_9",
+            "pos": [
+              -600.955078125,
+              1154
+            ]
+          },
+          {
+            "id": "68c8b3fa-d3fd-4281-82ba-09030a9918dc",
+            "name": "images.image_10",
+            "type": "IMAGE",
+            "linkIds": [
+              719,
+              787
+            ],
+            "label": "image_10",
+            "pos": [
+              -600.955078125,
+              1174
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "id": "f6f3effc-0961-4c17-b52c-a77c16ca6aa4",
+            "name": "IMAGE",
+            "type": "IMAGE",
+            "linkIds": [
+              1434
+            ],
+            "localized_name": "IMAGE",
+            "pos": [
+              1984,
+              664
+            ]
+          }
+        ],
+        "widgets": [],
+        "nodes": [
+          {
+            "id": 451,
+            "type": "UNETLoader",
+            "pos": [
+              -185.83963916739378,
+              386.4246219485647
+            ],
+            "size": [
+              510,
+              90
+            ],
+            "flags": {},
+            "order": 2,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "UNet名称",
+                "name": "unet_name",
+                "type": "COMBO",
+                "widget": {
+                  "name": "unet_name"
+                },
+                "link": 663
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "模型",
+                "name": "MODEL",
+                "type": "MODEL",
+                "links": [
+                  688
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.41.0",
+              "Node name for S&R": "UNETLoader",
+              "models": [
+                {
+                  "name": "qwen_image_2.1_turbo_int8_convrot.safetensors",
+                  "url": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/main/diffusion_models/qwen_image_2.1_turbo_int8_convrot.safetensors",
+                  "directory": "diffusion_models"
+                }
+              ]
+            },
+            "widgets_values": [
+              "qwen_image_2.1_turbo_int8_convrot.safetensors",
+              "default"
+            ],
+            "widgets_values_named": {
+              "unet_name": "qwen_image_2.1_turbo_int8_convrot.safetensors",
+              "weight_dtype": "default"
+            }
+          },
+          {
+            "id": 453,
+            "type": "CLIPLoader",
+            "pos": [
+              -190,
+              570
+            ],
+            "size": [
+              510,
+              120
+            ],
+            "flags": {},
+            "order": 3,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "CLIP名称",
+                "name": "clip_name",
+                "type": "COMBO",
+                "widget": {
+                  "name": "clip_name"
+                },
+                "link": 664
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "CLIP",
+                "name": "CLIP",
+                "type": "CLIP",
+                "links": [
+                  721,
+                  1485
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.41.0",
+              "Node name for S&R": "CLIPLoader",
+              "models": [
+                {
+                  "name": "qwen3vl_8b_int8_convrot.safetensors",
+                  "url": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/main/text_encoders/qwen3vl_8b_int8_convrot.safetensors",
+                  "directory": "text_encoders"
+                }
+              ]
+            },
+            "widgets_values": [
+              "qwen3vl_8b_int8_convrot.safetensors",
+              "qwen_image",
+              "default"
+            ],
+            "widgets_values_named": {
+              "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+              "type": "qwen_image",
+              "device": "default"
+            }
+          },
+          {
+            "id": 454,
+            "type": "VAELoader",
+            "pos": [
+              -190,
+              770
+            ],
+            "size": [
+              510,
+              70
+            ],
+            "flags": {},
+            "order": 4,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "vae名称",
+                "name": "vae_name",
+                "type": "COMBO",
+                "widget": {
+                  "name": "vae_name"
+                },
+                "link": 665
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "VAE",
+                "name": "VAE",
+                "type": "VAE",
+                "links": [
+                  720,
+                  1435
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.41.0",
+              "Node name for S&R": "VAELoader",
+              "models": [
+                {
+                  "name": "qwen_image_2.1_vae_bf16.safetensors",
+                  "url": "https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/main/vae/qwen_image_2.1_vae_bf16.safetensors",
+                  "directory": "vae"
+                }
+              ]
+            },
+            "widgets_values": [
+              "qwen_image_2.1_vae_bf16.safetensors"
+            ],
+            "widgets_values_named": {
+              "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+            }
+          },
+          {
+            "id": 456,
+            "type": "EmptyLatentImage",
+            "pos": [
+              -70,
+              1010
+            ],
+            "size": [
+              300,
+              120
+            ],
+            "flags": {},
+            "order": 5,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "宽度",
+                "name": "width",
+                "type": "INT",
+                "widget": {
+                  "name": "width"
+                },
+                "link": 660
+              },
+              {
+                "localized_name": "高度",
+                "name": "height",
+                "type": "INT",
+                "widget": {
+                  "name": "height"
+                },
+                "link": 661
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "Latent",
+                "name": "LATENT",
+                "type": "LATENT",
+                "links": [
+                  684
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.41.0",
+              "Node name for S&R": "EmptyLatentImage"
+            },
+            "widgets_values": [
+              1024,
+              1024,
+              1
+            ],
+            "widgets_values_named": {
+              "width": 1024,
+              "height": 1024,
+              "batch_size": 1
+            }
+          },
+          {
+            "id": 468,
+            "type": "ComfySwitchNode",
+            "pos": [
+              479.85314513256685,
+              1015.0153766097112
+            ],
+            "size": [
+              270,
+              80
+            ],
+            "flags": {},
+            "order": 6,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "为假时",
+                "name": "on_false",
+                "shape": 7,
+                "type": "LATENT",
+                "link": 724
+              },
+              {
+                "localized_name": "为真时",
+                "name": "on_true",
+                "shape": 7,
+                "type": "LATENT",
+                "link": 684
+              },
+              {
+                "localized_name": "切换",
+                "name": "switch",
+                "type": "BOOLEAN",
+                "widget": {
+                  "name": "switch"
+                },
+                "link": 703
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "输出",
+                "name": "output",
+                "type": "LATENT",
+                "links": [
+                  913
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.41.0",
+              "Node name for S&R": "ComfySwitchNode"
+            },
+            "widgets_values": [
+              false
+            ],
+            "widgets_values_named": {
+              "switch": false
+            }
+          },
+          {
+            "id": 469,
+            "type": "QwenImage21Cache",
+            "pos": [
+              955.4012707927922,
+              398.1717177666044
+            ],
+            "size": [
+              270,
+              90
+            ],
+            "flags": {},
+            "order": 7,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "model",
+                "name": "model",
+                "type": "MODEL",
+                "link": 688
+              },
+              {
+                "localized_name": "device",
+                "name": "device",
+                "type": "COMBO",
+                "widget": {
+                  "name": "device"
+                },
+                "link": 729
+              },
+              {
+                "localized_name": "dtype",
+                "name": "dtype",
+                "type": "COMBO",
+                "widget": {
+                  "name": "dtype"
+                },
+                "link": 730
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "模型",
+                "name": "MODEL",
+                "type": "MODEL",
+                "links": [
+                  908
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.41.0",
+              "Node name for S&R": "QwenImage21Cache"
+            },
+            "widgets_values": [
+              "auto",
+              "default"
+            ],
+            "widgets_values_named": {
+              "device": "auto",
+              "dtype": "default"
+            }
+          },
+          {
+            "id": 474,
+            "type": "TextEncodeQwenImage21",
+            "pos": [
+              419.68682172750084,
+              430.45130327289627
+            ],
+            "size": [
+              375.2628583088489,
+              456
+            ],
+            "flags": {},
+            "order": 8,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "clip",
+                "name": "clip",
+                "type": "CLIP",
+                "link": 721
+              },
+              {
+                "localized_name": "image_1",
+                "name": "images.image_1",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 710
+              },
+              {
+                "localized_name": "vae",
+                "name": "vae",
+                "shape": 7,
+                "type": "VAE",
+                "link": 720
+              },
+              {
+                "localized_name": "prompt",
+                "name": "prompt",
+                "type": "STRING",
+                "widget": {
+                  "name": "prompt"
+                },
+                "link": 743
+              },
+              {
+                "localized_name": "negative_prompt",
+                "name": "negative_prompt",
+                "type": "STRING",
+                "widget": {
+                  "name": "negative_prompt"
+                },
+                "link": 727
+              },
+              {
+                "localized_name": "resolution",
+                "name": "resolution",
+                "type": "INT",
+                "widget": {
+                  "name": "resolution"
+                },
+                "link": 725
+              },
+              {
+                "localized_name": "image_12",
+                "name": "images.image_12",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": null
+              },
+              {
+                "localized_name": "image_11",
+                "name": "images.image_11",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": null
+              },
+              {
+                "localized_name": "image_2",
+                "name": "images.image_2",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 711
+              },
+              {
+                "localized_name": "image_3",
+                "name": "images.image_3",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 712
+              },
+              {
+                "localized_name": "image_4",
+                "name": "images.image_4",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 713
+              },
+              {
+                "localized_name": "image_5",
+                "name": "images.image_5",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 714
+              },
+              {
+                "localized_name": "image_6",
+                "name": "images.image_6",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 715
+              },
+              {
+                "localized_name": "image_7",
+                "name": "images.image_7",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 716
+              },
+              {
+                "localized_name": "image_8",
+                "name": "images.image_8",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 717
+              },
+              {
+                "localized_name": "image_9",
+                "name": "images.image_9",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 718
+              },
+              {
+                "localized_name": "image_10",
+                "name": "images.image_10",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 719
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "positive",
+                "name": "positive",
+                "type": "CONDITIONING",
+                "links": [
+                  909
+                ]
+              },
+              {
+                "localized_name": "negative",
+                "name": "negative",
+                "type": "CONDITIONING",
+                "links": [
+                  910
+                ]
+              },
+              {
+                "localized_name": "latent",
+                "name": "latent",
+                "type": "LATENT",
+                "links": [
+                  724
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.41.0",
+              "Node name for S&R": "TextEncodeQwenImage21"
+            },
+            "widgets_values": [
+              "",
+              "",
+              1024,
+              [
+                false,
+                true
+              ],
+              [
+                false,
+                true
+              ]
+            ],
+            "widgets_values_named": {
+              "prompt": "",
+              "negative_prompt": "",
+              "resolution": 1024,
+              "speak_and_recognation": [
+                false,
+                true
+              ],
+              "speak_and_recognation#1": [
+                false,
+                true
+              ]
+            }
+          },
+          {
+            "id": 479,
+            "type": "PrimitiveStringMultiline",
+            "pos": [
+              -187.29339489813265,
+              10
+            ],
+            "size": [
+              620,
+              240
+            ],
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "字符串",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  901
+                ]
+              }
+            ],
+            "title": "Text (System Prompt)",
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.41.0",
+              "Node name for S&R": "PrimitiveStringMultiline"
+            },
+            "widgets_values": [
+              "# Edit Prompt Enhancer — General (v2, 精简版)\n\n**FIRST — there are TWO separate language decisions. Do NOT conflate them.**\n\n**(A) Language of the rewritten prompt's DESCRIPTIVE prose — every word OUTSIDE double quotes (the description you write for the diffusion model, NOT the text painted into the image). This decision is final and non-negotiable:**\n- User instruction is in Chinese → write the description in Chinese.\n- User instruction is in English → write the description in English.\n- User instruction is in ANY other language (Japanese, Korean, French, Spanish, Thai, etc.) → write the description in English.\n\n**(B) Language of the TEXT THAT WILL BE RENDERED INTO THE OUTPUT IMAGE — the content INSIDE double quotes. Decide it in this strict priority order:**\n1. If the user's instruction gives the exact text to write, OR names a target language for the text (e.g. \"改成'夏日特惠'\", \"把标题写成英文\", \"add a Japanese title\", \"write the caption in Thai\") → render exactly that text / in exactly that specified language.\n2. Otherwise, if the input image already contains text → render in the DOMINANT language of the image's existing text — even when the instruction is written in a different language.\n3. Otherwise (the image contains no text AND the instruction names no target language) → render in the language of the user's instruction itself — including Japanese, Korean, Thai, Arabic, French, etc. Do NOT force it to English.\nWorked example: image is mostly Thai, instruction is in English asking to add/redesign a title without giving the exact words or a language → the rendered (quoted) text must be **Thai** (the image's dominant language), while the surrounding description (A) is still written in English.\n\nTwo reinforcements on decision (B): all rendered (quoted) text must be **monolingual** — do not mix Chinese and English inside the quotes and do not emit a bilingual pair unless the user explicitly asks for one. And **genre never overrides input language**: a \"spec sheet / cinematic data-document / storyboard / technical parameter\" look is achieved through layout and typography, NOT by switching rendered labels to English — every header, label, and caption stays in the decided language (standardized units and user-given proper nouns may remain Latin).\n\nYou are an expert at clarifying image editing instructions. Given a user's vague or ambiguous edit instruction and the input image(s), rewrite it into a precise, unambiguous, actionable editing directive. An input image is ALWAYS present — this is always an image-editing task, never text-to-image from nothing.\n\n## Core Objective\n\nRewrite the instruction so a downstream image-editing model can execute it without guessing — anchored on what the input image(s) actually show, faithful to the user's intent, inventing nothing.\n\n**How much you build is intent-branched.** When the user wants *this picture changed* (a local object/attribute/background edit, a text or UI edit, a quality or style change, a viewpoint/canvas transform), clarify and constrain: say exactly what changes, and let everything else stand. When the user wants *a new picture of this subject* (placing a subject in a new scene, compositing across images, a photo-shoot or poster or infographic built from a reference), construct actively: design the scene, lighting, composition and layout to a professional standard. Scale the elaboration to what was asked — a plain placement stays restrained, a styled shoot or a publication-grade poster is built out fully.\n\n## The Governing Principle — Attribute Disentanglement at Full Strength\n\n**Edit exactly the attribute(s) the user named, push each to a strong and unmistakable degree, and hold everything else at input fidelity.**\n\nBoth halves matter, and the two failure modes are symmetric:\n\n- **Leakage** — touching what the user did not name (a sharpen that re-grades color, an upscale that reframes, a style change that drifts a face, an outfit swap that drops an accessory, a background change that \"helpfully\" cleans up something unmentioned).\n- **Under-editing** — an output a viewer could mistake for the unedited input, because the requested change was applied faintly.\n\nPreservation locks **content, never edit strength**. Recognizability is bought by naming what stays fixed, not by holding the effect back.\n\n## What to Anchor, What to Decide\n\n**Anchor on the image.** Every spatial, tonal and contextual claim comes from what is visibly there. If you are unsure a detail exists, leave it out — a preserved element described at a higher level of abstraction is always safer than an invented specific.\n\n**Say what stays, without repainting it.** Name the untargeted content by type, position and role rather than describing its appearance, and prefer one blanket preservation clause over walking the frame. A preservation description reads to the model as a generation instruction: the more concretely you describe something you meant to keep, the more likely it drifts. Describe appearance concretely only for what you are actually changing, or when it is the only way to disambiguate between similar objects.\n\n**Identity is the hardest invariant.** A person's facial identity and the personal accessories that make them recognizable; a product's exact design, markings and count; and the input's rendering medium (photograph, anime, illustration, sketch, 3D render, painting) all survive every edit unless the user explicitly targets them. When identity comes from a reference image, point at that image rather than describing features in words — verbal descriptions make the model regenerate and degrade the likeness.\n\n**Resolve ambiguity, then commit.** Turn vague intent, imprecise spatial reference and unparameterized style words into something concrete and observable. Translate abstract quality language into the visual properties it implies. Where the instruction offers alternatives or contradicts itself, pick the most reasonable reading and state it as a decision. Keep the user's own action verb, spatial relations and described state intact, and treat anything they asked to preserve as absolute. Preserve creative or physically impossible intent rather than correcting it.\n\n**Only what was asked.** Do not add operations the user did not request, and do not clean up unmentioned defects, overlays or clutter however prominent they look. When an edit removes, moves or reveals something, say enough about the newly exposed region that the result stays physically coherent.\n\n**Text in the image is literal.** Whenever readable text will appear in the output, commit to the exact characters — every element, quoted, nothing summarized or abbreviated away. Text you cannot commit to should not be added at all. Match the typography and language the input establishes unless the user asks otherwise. When the operation extends the canvas outward, name it as outpainting explicitly.\n\n**Write it as an instruction.** Lead with the operation, not a description of the finished picture, and write from the perspective of someone holding only the input image(s).\n\n## Thinking Process\n\nBefore emitting the final prompt, reason through: what the image(s) actually contain (including a complete reading of any text present); what the user is asking for and which attributes that names; what must therefore stay fixed; and finally the composed directive. Close with a check that every visible element is either the target of the edit or covered by what stays fixed, that the requested change is unmistakable, that nothing outside the target was touched, and that every quoted string obeys language decision (B).\n\n## Image Reference Rules\n\nFor Multi-Image Input (N >= 2), the rewritten instruction MUST use `<image1>`, `<image2>`, ... to refer to each input image. Do not use natural language references like \"图1\", \"第一张图\", \"the first image\", or \"image A\". This tagging format is mandatory and non-negotiable. For single-image input (N = 1), do NOT use tags — refer to the image naturally (\"图像\", \"图片中\", \"the image\").\n\nState each image's role explicitly — which one is the canvas whose composition and untargeted content survive, and which supply material to transfer — and say what is taken from each. For scene generation with no canvas (合影/合照 and the like), all images serve as identity sources. Describe every referenced image individually; never compress several into a range or a group to avoid describing them one by one.\n\n## Output Format\nOutput ONLY the rewritten editing instruction itself: one single continuous paragraph of plain text.\n\nFormatting rules:\n- The entire rewritten prompt must be a single continuous paragraph with NO line breaks or newline characters.\n- The response must contain nothing except the instruction itself: no object or array wrapper, no field names or key-value pairs, no headings, labels, or prefaces, no greetings, explanations, or commentary, no markdown, and no code fences. Begin with the first word of the instruction and end with its last word.\n- Do not wrap the whole instruction in quotes: double quotes are reserved for text that will be RENDERED in the image (next rule).\n- All text that should appear as visible, readable content in the output image must be enclosed in double quotes (\"\"). Descriptive or structural language that does not appear as rendered text should NOT be quoted.\n- **Never include any resolution or aspect ratio information** (e.g., \"2:3\", \"16:9\", \"1920x1080\", \"2K\", \"4K\"). Output size is decided downstream, not by you.\n- Write it out in full — no ellipsis, no truncation.\n- State requirements affirmatively (\"保持背景与输入图完全一致\") rather than as prohibitions (\"禁止改变背景\"). Standard preservation phrasing \"保持/保留[X]不变\" is fine.\n- Be precise and decisive: no hedging, no unresolved alternatives, no vague degree words left unresolved.\n- The descriptive prose (outside double quotes) follows language decision (A); the text rendered inside the image (inside double quotes) follows language decision (B). Retain proper nouns and domain-specific terms in their original language, placed in English double quotes.\n- **Language-purge self-check (do this last)**: re-scan every double-quoted string — the text that will be RENDERED in the image — and enforce language decision (B). No quoted string may mix Chinese and English, form a bilingual pair, or carry a parenthetical translation gloss unless the user explicitly asked. Standardized units and user-given proper nouns may remain Latin.\n\nThe user's edit instruction to rewrite is:",
+              [
+                false,
+                true
+              ]
+            ],
+            "widgets_values_named": {
+              "value": "# Edit Prompt Enhancer — General (v2, 精简版)\n\n**FIRST — there are TWO separate language decisions. Do NOT conflate them.**\n\n**(A) Language of the rewritten prompt's DESCRIPTIVE prose — every word OUTSIDE double quotes (the description you write for the diffusion model, NOT the text painted into the image). This decision is final and non-negotiable:**\n- User instruction is in Chinese → write the description in Chinese.\n- User instruction is in English → write the description in English.\n- User instruction is in ANY other language (Japanese, Korean, French, Spanish, Thai, etc.) → write the description in English.\n\n**(B) Language of the TEXT THAT WILL BE RENDERED INTO THE OUTPUT IMAGE — the content INSIDE double quotes. Decide it in this strict priority order:**\n1. If the user's instruction gives the exact text to write, OR names a target language for the text (e.g. \"改成'夏日特惠'\", \"把标题写成英文\", \"add a Japanese title\", \"write the caption in Thai\") → render exactly that text / in exactly that specified language.\n2. Otherwise, if the input image already contains text → render in the DOMINANT language of the image's existing text — even when the instruction is written in a different language.\n3. Otherwise (the image contains no text AND the instruction names no target language) → render in the language of the user's instruction itself — including Japanese, Korean, Thai, Arabic, French, etc. Do NOT force it to English.\nWorked example: image is mostly Thai, instruction is in English asking to add/redesign a title without giving the exact words or a language → the rendered (quoted) text must be **Thai** (the image's dominant language), while the surrounding description (A) is still written in English.\n\nTwo reinforcements on decision (B): all rendered (quoted) text must be **monolingual** — do not mix Chinese and English inside the quotes and do not emit a bilingual pair unless the user explicitly asks for one. And **genre never overrides input language**: a \"spec sheet / cinematic data-document / storyboard / technical parameter\" look is achieved through layout and typography, NOT by switching rendered labels to English — every header, label, and caption stays in the decided language (standardized units and user-given proper nouns may remain Latin).\n\nYou are an expert at clarifying image editing instructions. Given a user's vague or ambiguous edit instruction and the input image(s), rewrite it into a precise, unambiguous, actionable editing directive. An input image is ALWAYS present — this is always an image-editing task, never text-to-image from nothing.\n\n## Core Objective\n\nRewrite the instruction so a downstream image-editing model can execute it without guessing — anchored on what the input image(s) actually show, faithful to the user's intent, inventing nothing.\n\n**How much you build is intent-branched.** When the user wants *this picture changed* (a local object/attribute/background edit, a text or UI edit, a quality or style change, a viewpoint/canvas transform), clarify and constrain: say exactly what changes, and let everything else stand. When the user wants *a new picture of this subject* (placing a subject in a new scene, compositing across images, a photo-shoot or poster or infographic built from a reference), construct actively: design the scene, lighting, composition and layout to a professional standard. Scale the elaboration to what was asked — a plain placement stays restrained, a styled shoot or a publication-grade poster is built out fully.\n\n## The Governing Principle — Attribute Disentanglement at Full Strength\n\n**Edit exactly the attribute(s) the user named, push each to a strong and unmistakable degree, and hold everything else at input fidelity.**\n\nBoth halves matter, and the two failure modes are symmetric:\n\n- **Leakage** — touching what the user did not name (a sharpen that re-grades color, an upscale that reframes, a style change that drifts a face, an outfit swap that drops an accessory, a background change that \"helpfully\" cleans up something unmentioned).\n- **Under-editing** — an output a viewer could mistake for the unedited input, because the requested change was applied faintly.\n\nPreservation locks **content, never edit strength**. Recognizability is bought by naming what stays fixed, not by holding the effect back.\n\n## What to Anchor, What to Decide\n\n**Anchor on the image.** Every spatial, tonal and contextual claim comes from what is visibly there. If you are unsure a detail exists, leave it out — a preserved element described at a higher level of abstraction is always safer than an invented specific.\n\n**Say what stays, without repainting it.** Name the untargeted content by type, position and role rather than describing its appearance, and prefer one blanket preservation clause over walking the frame. A preservation description reads to the model as a generation instruction: the more concretely you describe something you meant to keep, the more likely it drifts. Describe appearance concretely only for what you are actually changing, or when it is the only way to disambiguate between similar objects.\n\n**Identity is the hardest invariant.** A person's facial identity and the personal accessories that make them recognizable; a product's exact design, markings and count; and the input's rendering medium (photograph, anime, illustration, sketch, 3D render, painting) all survive every edit unless the user explicitly targets them. When identity comes from a reference image, point at that image rather than describing features in words — verbal descriptions make the model regenerate and degrade the likeness.\n\n**Resolve ambiguity, then commit.** Turn vague intent, imprecise spatial reference and unparameterized style words into something concrete and observable. Translate abstract quality language into the visual properties it implies. Where the instruction offers alternatives or contradicts itself, pick the most reasonable reading and state it as a decision. Keep the user's own action verb, spatial relations and described state intact, and treat anything they asked to preserve as absolute. Preserve creative or physically impossible intent rather than correcting it.\n\n**Only what was asked.** Do not add operations the user did not request, and do not clean up unmentioned defects, overlays or clutter however prominent they look. When an edit removes, moves or reveals something, say enough about the newly exposed region that the result stays physically coherent.\n\n**Text in the image is literal.** Whenever readable text will appear in the output, commit to the exact characters — every element, quoted, nothing summarized or abbreviated away. Text you cannot commit to should not be added at all. Match the typography and language the input establishes unless the user asks otherwise. When the operation extends the canvas outward, name it as outpainting explicitly.\n\n**Write it as an instruction.** Lead with the operation, not a description of the finished picture, and write from the perspective of someone holding only the input image(s).\n\n## Thinking Process\n\nBefore emitting the final prompt, reason through: what the image(s) actually contain (including a complete reading of any text present); what the user is asking for and which attributes that names; what must therefore stay fixed; and finally the composed directive. Close with a check that every visible element is either the target of the edit or covered by what stays fixed, that the requested change is unmistakable, that nothing outside the target was touched, and that every quoted string obeys language decision (B).\n\n## Image Reference Rules\n\nFor Multi-Image Input (N >= 2), the rewritten instruction MUST use `<image1>`, `<image2>`, ... to refer to each input image. Do not use natural language references like \"图1\", \"第一张图\", \"the first image\", or \"image A\". This tagging format is mandatory and non-negotiable. For single-image input (N = 1), do NOT use tags — refer to the image naturally (\"图像\", \"图片中\", \"the image\").\n\nState each image's role explicitly — which one is the canvas whose composition and untargeted content survive, and which supply material to transfer — and say what is taken from each. For scene generation with no canvas (合影/合照 and the like), all images serve as identity sources. Describe every referenced image individually; never compress several into a range or a group to avoid describing them one by one.\n\n## Output Format\nOutput ONLY the rewritten editing instruction itself: one single continuous paragraph of plain text.\n\nFormatting rules:\n- The entire rewritten prompt must be a single continuous paragraph with NO line breaks or newline characters.\n- The response must contain nothing except the instruction itself: no object or array wrapper, no field names or key-value pairs, no headings, labels, or prefaces, no greetings, explanations, or commentary, no markdown, and no code fences. Begin with the first word of the instruction and end with its last word.\n- Do not wrap the whole instruction in quotes: double quotes are reserved for text that will be RENDERED in the image (next rule).\n- All text that should appear as visible, readable content in the output image must be enclosed in double quotes (\"\"). Descriptive or structural language that does not appear as rendered text should NOT be quoted.\n- **Never include any resolution or aspect ratio information** (e.g., \"2:3\", \"16:9\", \"1920x1080\", \"2K\", \"4K\"). Output size is decided downstream, not by you.\n- Write it out in full — no ellipsis, no truncation.\n- State requirements affirmatively (\"保持背景与输入图完全一致\") rather than as prohibitions (\"禁止改变背景\"). Standard preservation phrasing \"保持/保留[X]不变\" is fine.\n- Be precise and decisive: no hedging, no unresolved alternatives, no vague degree words left unresolved.\n- The descriptive prose (outside double quotes) follows language decision (A); the text rendered inside the image (inside double quotes) follows language decision (B). Retain proper nouns and domain-specific terms in their original language, placed in English double quotes.\n- **Language-purge self-check (do this last)**: re-scan every double-quoted string — the text that will be RENDERED in the image — and enforce language decision (B). No quoted string may mix Chinese and English, form a bilingual pair, or carry a parenthetical translation gloss unless the user explicitly asked. Standardized units and user-given proper nouns may remain Latin.\n\nThe user's edit instruction to rewrite is:",
+              "speak_and_recognation": [
+                false,
+                true
+              ]
+            }
+          },
+          {
+            "id": 480,
+            "type": "PreviewAny",
+            "pos": [
+              1040,
+              -480
+            ],
+            "size": [
+              470,
+              680
+            ],
+            "flags": {},
+            "order": 9,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "源",
+                "name": "source",
+                "type": "*",
+                "link": 791
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "字符串",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  743
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.41.0",
+              "Node name for S&R": "PreviewAny"
+            },
+            "widgets_values": [],
+            "widgets_values_named": {}
+          },
+          {
+            "id": 484,
+            "type": "ComfySwitchNode",
+            "pos": [
+              577.5941182351431,
+              97.07790174872602
+            ],
+            "size": [
+              270,
+              80
+            ],
+            "flags": {},
+            "order": 10,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "为假时",
+                "name": "on_false",
+                "shape": 7,
+                "type": "STRING",
+                "link": 739
+              },
+              {
+                "localized_name": "为真时",
+                "name": "on_true",
+                "shape": 7,
+                "type": "STRING",
+                "link": 806
+              },
+              {
+                "localized_name": "切换",
+                "name": "switch",
+                "type": "BOOLEAN",
+                "widget": {
+                  "name": "switch"
+                },
+                "link": 741
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "输出",
+                "name": "output",
+                "type": "STRING",
+                "links": [
+                  791
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.41.0",
+              "Node name for S&R": "ComfySwitchNode"
+            },
+            "widgets_values": [
+              false
+            ],
+            "widgets_values_named": {
+              "switch": false
+            }
+          },
+          {
+            "id": 485,
+            "type": "BatchImagesNode",
+            "pos": [
+              -178.60350554718843,
+              -307.6951600987362
+            ],
+            "size": [
+              230,
+              270
+            ],
+            "flags": {},
+            "order": 11,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "image0",
+                "name": "images.image0",
+                "type": "IMAGE",
+                "link": 750
+              },
+              {
+                "localized_name": "image1",
+                "name": "images.image1",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 779
+              },
+              {
+                "localized_name": "image5",
+                "name": "images.image5",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 780
+              },
+              {
+                "localized_name": "image6",
+                "name": "images.image6",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 781
+              },
+              {
+                "localized_name": "image7",
+                "name": "images.image7",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 782
+              },
+              {
+                "localized_name": "image8",
+                "name": "images.image8",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 783
+              },
+              {
+                "localized_name": "image9",
+                "name": "images.image9",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 784
+              },
+              {
+                "localized_name": "image10",
+                "name": "images.image10",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 785
+              },
+              {
+                "localized_name": "image11",
+                "name": "images.image11",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 786
+              },
+              {
+                "localized_name": "image12",
+                "name": "images.image12",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 787
+              },
+              {
+                "localized_name": "image13",
+                "name": "images.image13",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": null
+              },
+              {
+                "localized_name": "image2",
+                "name": "images.image2",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": null
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "图像",
+                "name": "IMAGE",
+                "type": "IMAGE",
+                "links": [
+                  801
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.41.0",
+              "Node name for S&R": "BatchImagesNode"
+            }
+          },
+          {
+            "id": 500,
+            "type": "TextGenerate",
+            "pos": [
+              500,
+              -480
+            ],
+            "size": [
+              400,
+              461
+            ],
+            "flags": {},
+            "order": 12,
+            "mode": 0,
+            "showAdvanced": true,
+            "inputs": [
+              {
+                "localized_name": "clip",
+                "name": "clip",
+                "type": "CLIP",
+                "link": 1485
+              },
+              {
+                "localized_name": "图像",
+                "name": "image",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 801
+              },
+              {
+                "localized_name": "视频",
+                "name": "video",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": null
+              },
+              {
+                "localized_name": "音频",
+                "name": "audio",
+                "shape": 7,
+                "type": "AUDIO",
+                "link": null
+              },
+              {
+                "localized_name": "系统提示词",
+                "name": "system_prompt",
+                "shape": 7,
+                "type": "STRING",
+                "link": 901
+              },
+              {
+                "localized_name": "提示词",
+                "name": "prompt",
+                "type": "STRING",
+                "widget": {
+                  "name": "prompt"
+                },
+                "link": 802
+              },
+              {
+                "localized_name": "最大长度",
+                "name": "max_length",
+                "type": "INT",
+                "widget": {
+                  "name": "max_length"
+                },
+                "link": 903
+              },
+              {
+                "localized_name": "种子",
+                "name": "sampling_mode.seed",
+                "type": "INT",
+                "widget": {
+                  "name": "sampling_mode.seed"
+                },
+                "link": 804
+              },
+              {
+                "localized_name": "思考模式",
+                "name": "thinking",
+                "shape": 7,
+                "type": "BOOLEAN",
+                "widget": {
+                  "name": "thinking"
+                },
+                "link": 902
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "生成文本",
+                "name": "generated_text",
+                "type": "STRING",
+                "links": [
+                  806
+                ]
+              },
+              {
+                "localized_name": "思考",
+                "name": "thinking",
+                "type": "STRING",
+                "links": null
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.41.0",
+              "Node name for S&R": "TextGenerate"
+            },
+            "widgets_values": [
+              "",
+              4096,
+              "on",
+              1,
+              20,
+              0.95,
+              0,
+              1,
+              0,
+              0,
+              true,
+              true,
+              "auto",
+              [
+                false,
+                true
+              ]
+            ],
+            "widgets_values_named": {
+              "prompt": "",
+              "max_length": 4096,
+              "sampling_mode": "on",
+              "sampling_mode.temperature": 1,
+              "sampling_mode.top_k": 20,
+              "sampling_mode.top_p": 0.95,
+              "sampling_mode.min_p": 0,
+              "sampling_mode.repetition_penalty": 1,
+              "sampling_mode.seed": 0,
+              "sampling_mode.presence_penalty": 0,
+              "thinking": true,
+              "use_default_template": true,
+              "mtp": "auto",
+              "speak_and_recognation": [
+                false,
+                true
+              ]
+            }
+          },
+          {
+            "id": 502,
+            "type": "ManualSigmas",
+            "pos": [
+              965.7365870616367,
+              1053.9252521551643
+            ],
+            "size": [
+              418.9732421875,
+              58
+            ],
+            "flags": {},
+            "order": 1,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "Sigmas",
+                "name": "SIGMAS",
+                "type": "SIGMAS",
+                "links": [
+                  906
+                ]
+              }
+            ],
+            "title": "Manual Sigmas (Qwen-Image-2.1-Turbo 8-step schedule)",
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.41.0",
+              "Node name for S&R": "ManualSigmas"
+            },
+            "widgets_values": [
+              "1.0, 0.978453, 0.95418, 0.926626, 0.89508, 0.845148, 0.704534, 0.414568, 0"
+            ],
+            "widgets_values_named": {
+              "sigmas": "1.0, 0.978453, 0.95418, 0.926626, 0.89508, 0.845148, 0.704534, 0.414568, 0"
+            }
+          },
+          {
+            "id": 503,
+            "type": "KSamplerSelect",
+            "pos": [
+              956.9532525294051,
+              907.865461371432
+            ],
+            "size": [
+              270,
+              58
+            ],
+            "flags": {},
+            "order": 13,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "采样器名称",
+                "name": "sampler_name",
+                "type": "COMBO",
+                "widget": {
+                  "name": "sampler_name"
+                },
+                "link": 915
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "采样器",
+                "name": "SAMPLER",
+                "type": "SAMPLER",
+                "links": [
+                  905
+                ]
+              }
+            ],
+            "title": "KSampler Select (euler)",
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.41.0",
+              "Node name for S&R": "KSamplerSelect"
+            },
+            "widgets_values": [
+              "euler"
+            ],
+            "widgets_values_named": {
+              "sampler_name": "euler"
+            }
+          },
+          {
+            "id": 504,
+            "type": "RandomNoise",
+            "pos": [
+              956.9532525294051,
+              571.865461371432
+            ],
+            "size": [
+              270,
+              82
+            ],
+            "flags": {},
+            "order": 14,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "噪波随机种",
+                "name": "noise_seed",
+                "type": "INT",
+                "widget": {
+                  "name": "noise_seed"
+                },
+                "link": 914
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "噪波",
+                "name": "NOISE",
+                "type": "NOISE",
+                "links": [
+                  904
+                ]
+              }
+            ],
+            "title": "Random Noise",
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.41.0",
+              "Node name for S&R": "RandomNoise"
+            },
+            "widgets_values": [
+              424242,
+              "randomize"
+            ],
+            "widgets_values_named": {
+              "noise_seed": 424242,
+              "control_after_generate": "randomize"
+            }
+          },
+          {
+            "id": 505,
+            "type": "SamplerCustomAdvanced",
+            "pos": [
+              1284.3410123920985,
+              595.4249474282406
+            ],
+            "size": [
+              220.2388671875,
+              106
+            ],
+            "flags": {},
+            "order": 15,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "噪波",
+                "name": "noise",
+                "type": "NOISE",
+                "link": 904
+              },
+              {
+                "localized_name": "引导器",
+                "name": "guider",
+                "type": "GUIDER",
+                "link": 912
+              },
+              {
+                "localized_name": "采样器",
+                "name": "sampler",
+                "type": "SAMPLER",
+                "link": 905
+              },
+              {
+                "localized_name": "西格玛",
+                "name": "sigmas",
+                "type": "SIGMAS",
+                "link": 906
+              },
+              {
+                "localized_name": "Latent图像",
+                "name": "latent_image",
+                "type": "LATENT",
+                "link": 913
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "Latent",
+                "name": "output",
+                "type": "LATENT",
+                "links": [
+                  1433
+                ]
+              },
+              {
+                "localized_name": "降噪Latent",
+                "name": "denoised_output",
+                "type": "LATENT",
+                "links": []
+              }
+            ],
+            "title": "Sampler Custom Advanced",
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.41.0",
+              "Node name for S&R": "SamplerCustomAdvanced"
+            }
+          },
+          {
+            "id": 507,
+            "type": "CFGGuider",
+            "pos": [
+              956.9532525294051,
+              731.865461371432
+            ],
+            "size": [
+              270,
+              98
+            ],
+            "flags": {},
+            "order": 16,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "模型",
+                "name": "model",
+                "type": "MODEL",
+                "link": 908
+              },
+              {
+                "localized_name": "正面条件",
+                "name": "positive",
+                "type": "CONDITIONING",
+                "link": 909
+              },
+              {
+                "localized_name": "负面条件",
+                "name": "negative",
+                "type": "CONDITIONING",
+                "link": 910
+              },
+              {
+                "localized_name": "CFG",
+                "name": "cfg",
+                "type": "FLOAT",
+                "widget": {
+                  "name": "cfg"
+                },
+                "link": 911
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "引导器",
+                "name": "GUIDER",
+                "type": "GUIDER",
+                "links": [
+                  912
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.41.0",
+              "Node name for S&R": "CFGGuider"
+            },
+            "widgets_values": [
+              8
+            ],
+            "widgets_values_named": {
+              "cfg": 8
+            }
+          },
+          {
+            "id": 930,
+            "type": "VAEDecode",
+            "pos": [
+              1603.163981243292,
+              618.2157551560683
+            ],
+            "size": [
+              140,
+              46
+            ],
+            "flags": {},
+            "order": 17,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "Latent",
+                "name": "samples",
+                "type": "LATENT",
+                "link": 1433
+              },
+              {
+                "localized_name": "vae",
+                "name": "vae",
+                "type": "VAE",
+                "link": 1435
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "图像",
+                "name": "IMAGE",
+                "type": "IMAGE",
+                "links": [
+                  1434
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.41.0",
+              "Node name for S&R": "VAEDecode"
+            }
+          }
+        ],
+        "groups": [
+          {
+            "id": 34,
+            "title": "Models",
+            "bounding": [
+              -200,
+              300,
+              530,
+              590
+            ],
+            "color": "#3f789e",
+            "flags": {}
+          },
+          {
+            "id": 35,
+            "title": "Image Size",
+            "bounding": [
+              -200,
+              920,
+              530,
+              250
+            ],
+            "color": "#3f789e",
+            "flags": {}
+          },
+          {
+            "id": 36,
+            "title": "Conditioning",
+            "bounding": [
+              360,
+              300,
+              530.8552941790844,
+              871.7338850953031
+            ],
+            "color": "#3f789e",
+            "flags": {}
+          },
+          {
+            "id": 37,
+            "title": "Sampling",
+            "bounding": [
+              924.1133558908087,
+              299.72738075964855,
+              633.5751735791238,
+              874.5578559968081
+            ],
+            "color": "#3f789e",
+            "flags": {}
+          },
+          {
+            "id": 38,
+            "title": "Prompt Enhancer",
+            "bounding": [
+              -200,
+              -560,
+              1750,
+              830
+            ],
+            "color": "#3f789e",
+            "flags": {}
+          }
+        ],
+        "links": [
+          {
+            "id": 684,
+            "origin_id": 456,
+            "origin_slot": 0,
+            "target_id": 468,
+            "target_slot": 1,
+            "type": "LATENT"
+          },
+          {
+            "id": 688,
+            "origin_id": 451,
+            "origin_slot": 0,
+            "target_id": 469,
+            "target_slot": 0,
+            "type": "MODEL"
+          },
+          {
+            "id": 724,
+            "origin_id": 474,
+            "origin_slot": 2,
+            "target_id": 468,
+            "target_slot": 0,
+            "type": "LATENT"
+          },
+          {
+            "id": 791,
+            "origin_id": 484,
+            "origin_slot": 0,
+            "target_id": 480,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 806,
+            "origin_id": 500,
+            "origin_slot": 0,
+            "target_id": 484,
+            "target_slot": 1,
+            "type": "STRING"
+          },
+          {
+            "id": 739,
+            "origin_id": -10,
+            "origin_slot": 1,
+            "target_id": 484,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 741,
+            "origin_id": -10,
+            "origin_slot": 2,
+            "target_id": 484,
+            "target_slot": 2,
+            "type": "BOOLEAN"
+          },
+          {
+            "id": 904,
+            "origin_id": 504,
+            "origin_slot": 0,
+            "target_id": 505,
+            "target_slot": 0,
+            "type": "NOISE"
+          },
+          {
+            "id": 905,
+            "origin_id": 503,
+            "origin_slot": 0,
+            "target_id": 505,
+            "target_slot": 2,
+            "type": "SAMPLER"
+          },
+          {
+            "id": 906,
+            "origin_id": 502,
+            "origin_slot": 0,
+            "target_id": 505,
+            "target_slot": 3,
+            "type": "SIGMAS"
+          },
+          {
+            "id": 908,
+            "origin_id": 469,
+            "origin_slot": 0,
+            "target_id": 507,
+            "target_slot": 0,
+            "type": "MODEL"
+          },
+          {
+            "id": 909,
+            "origin_id": 474,
+            "origin_slot": 0,
+            "target_id": 507,
+            "target_slot": 1,
+            "type": "CONDITIONING"
+          },
+          {
+            "id": 910,
+            "origin_id": 474,
+            "origin_slot": 1,
+            "target_id": 507,
+            "target_slot": 2,
+            "type": "CONDITIONING"
+          },
+          {
+            "id": 911,
+            "origin_id": -10,
+            "origin_slot": 6,
+            "target_id": 507,
+            "target_slot": 3,
+            "type": "FLOAT"
+          },
+          {
+            "id": 912,
+            "origin_id": 507,
+            "origin_slot": 0,
+            "target_id": 505,
+            "target_slot": 1,
+            "type": "GUIDER"
+          },
+          {
+            "id": 913,
+            "origin_id": 468,
+            "origin_slot": 0,
+            "target_id": 505,
+            "target_slot": 4,
+            "type": "LATENT"
+          },
+          {
+            "id": 703,
+            "origin_id": -10,
+            "origin_slot": 7,
+            "target_id": 468,
+            "target_slot": 2,
+            "type": "BOOLEAN"
+          },
+          {
+            "id": 660,
+            "origin_id": -10,
+            "origin_slot": 8,
+            "target_id": 456,
+            "target_slot": 0,
+            "type": "INT"
+          },
+          {
+            "id": 661,
+            "origin_id": -10,
+            "origin_slot": 9,
+            "target_id": 456,
+            "target_slot": 1,
+            "type": "INT"
+          },
+          {
+            "id": 915,
+            "origin_id": -10,
+            "origin_slot": 10,
+            "target_id": 503,
+            "target_slot": 0,
+            "type": "COMBO"
+          },
+          {
+            "id": 914,
+            "origin_id": -10,
+            "origin_slot": 11,
+            "target_id": 504,
+            "target_slot": 0,
+            "type": "INT"
+          },
+          {
+            "id": 663,
+            "origin_id": -10,
+            "origin_slot": 12,
+            "target_id": 451,
+            "target_slot": 0,
+            "type": "COMBO"
+          },
+          {
+            "id": 664,
+            "origin_id": -10,
+            "origin_slot": 13,
+            "target_id": 453,
+            "target_slot": 0,
+            "type": "COMBO"
+          },
+          {
+            "id": 665,
+            "origin_id": -10,
+            "origin_slot": 14,
+            "target_id": 454,
+            "target_slot": 0,
+            "type": "COMBO"
+          },
+          {
+            "id": 729,
+            "origin_id": -10,
+            "origin_slot": 15,
+            "target_id": 469,
+            "target_slot": 1,
+            "type": "COMBO"
+          },
+          {
+            "id": 730,
+            "origin_id": -10,
+            "origin_slot": 16,
+            "target_id": 469,
+            "target_slot": 2,
+            "type": "COMBO"
+          },
+          {
+            "id": 1433,
+            "origin_id": 505,
+            "origin_slot": 0,
+            "target_id": 930,
+            "target_slot": 0,
+            "type": "LATENT"
+          },
+          {
+            "id": 1434,
+            "origin_id": 930,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 1435,
+            "origin_id": 454,
+            "origin_slot": 0,
+            "target_id": 930,
+            "target_slot": 1,
+            "type": "VAE"
+          },
+          {
+            "id": 721,
+            "origin_id": 453,
+            "origin_slot": 0,
+            "target_id": 474,
+            "target_slot": 0,
+            "type": "CLIP"
+          },
+          {
+            "id": 710,
+            "origin_id": -10,
+            "origin_slot": 17,
+            "target_id": 474,
+            "target_slot": 1,
+            "type": "IMAGE"
+          },
+          {
+            "id": 720,
+            "origin_id": 454,
+            "origin_slot": 0,
+            "target_id": 474,
+            "target_slot": 2,
+            "type": "VAE"
+          },
+          {
+            "id": 743,
+            "origin_id": 480,
+            "origin_slot": 0,
+            "target_id": 474,
+            "target_slot": 3,
+            "type": "STRING"
+          },
+          {
+            "id": 727,
+            "origin_id": -10,
+            "origin_slot": 5,
+            "target_id": 474,
+            "target_slot": 4,
+            "type": "STRING"
+          },
+          {
+            "id": 725,
+            "origin_id": -10,
+            "origin_slot": 0,
+            "target_id": 474,
+            "target_slot": 5,
+            "type": "INT"
+          },
+          {
+            "id": 711,
+            "origin_id": -10,
+            "origin_slot": 18,
+            "target_id": 474,
+            "target_slot": 8,
+            "type": "IMAGE"
+          },
+          {
+            "id": 712,
+            "origin_id": -10,
+            "origin_slot": 19,
+            "target_id": 474,
+            "target_slot": 9,
+            "type": "IMAGE"
+          },
+          {
+            "id": 713,
+            "origin_id": -10,
+            "origin_slot": 20,
+            "target_id": 474,
+            "target_slot": 10,
+            "type": "IMAGE"
+          },
+          {
+            "id": 714,
+            "origin_id": -10,
+            "origin_slot": 21,
+            "target_id": 474,
+            "target_slot": 11,
+            "type": "IMAGE"
+          },
+          {
+            "id": 715,
+            "origin_id": -10,
+            "origin_slot": 22,
+            "target_id": 474,
+            "target_slot": 12,
+            "type": "IMAGE"
+          },
+          {
+            "id": 716,
+            "origin_id": -10,
+            "origin_slot": 23,
+            "target_id": 474,
+            "target_slot": 13,
+            "type": "IMAGE"
+          },
+          {
+            "id": 717,
+            "origin_id": -10,
+            "origin_slot": 24,
+            "target_id": 474,
+            "target_slot": 14,
+            "type": "IMAGE"
+          },
+          {
+            "id": 718,
+            "origin_id": -10,
+            "origin_slot": 25,
+            "target_id": 474,
+            "target_slot": 15,
+            "type": "IMAGE"
+          },
+          {
+            "id": 719,
+            "origin_id": -10,
+            "origin_slot": 26,
+            "target_id": 474,
+            "target_slot": 16,
+            "type": "IMAGE"
+          },
+          {
+            "id": 750,
+            "origin_id": -10,
+            "origin_slot": 17,
+            "target_id": 485,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 779,
+            "origin_id": -10,
+            "origin_slot": 18,
+            "target_id": 485,
+            "target_slot": 1,
+            "type": "IMAGE"
+          },
+          {
+            "id": 780,
+            "origin_id": -10,
+            "origin_slot": 19,
+            "target_id": 485,
+            "target_slot": 2,
+            "type": "IMAGE"
+          },
+          {
+            "id": 781,
+            "origin_id": -10,
+            "origin_slot": 20,
+            "target_id": 485,
+            "target_slot": 3,
+            "type": "IMAGE"
+          },
+          {
+            "id": 782,
+            "origin_id": -10,
+            "origin_slot": 21,
+            "target_id": 485,
+            "target_slot": 4,
+            "type": "IMAGE"
+          },
+          {
+            "id": 783,
+            "origin_id": -10,
+            "origin_slot": 22,
+            "target_id": 485,
+            "target_slot": 5,
+            "type": "IMAGE"
+          },
+          {
+            "id": 784,
+            "origin_id": -10,
+            "origin_slot": 23,
+            "target_id": 485,
+            "target_slot": 6,
+            "type": "IMAGE"
+          },
+          {
+            "id": 785,
+            "origin_id": -10,
+            "origin_slot": 24,
+            "target_id": 485,
+            "target_slot": 7,
+            "type": "IMAGE"
+          },
+          {
+            "id": 786,
+            "origin_id": -10,
+            "origin_slot": 25,
+            "target_id": 485,
+            "target_slot": 8,
+            "type": "IMAGE"
+          },
+          {
+            "id": 787,
+            "origin_id": -10,
+            "origin_slot": 26,
+            "target_id": 485,
+            "target_slot": 9,
+            "type": "IMAGE"
+          },
+          {
+            "id": 1485,
+            "origin_id": 453,
+            "origin_slot": 0,
+            "target_id": 500,
+            "target_slot": 0,
+            "type": "CLIP"
+          },
+          {
+            "id": 801,
+            "origin_id": 485,
+            "origin_slot": 0,
+            "target_id": 500,
+            "target_slot": 1,
+            "type": "IMAGE"
+          },
+          {
+            "id": 901,
+            "origin_id": 479,
+            "origin_slot": 0,
+            "target_id": 500,
+            "target_slot": 4,
+            "type": "STRING"
+          },
+          {
+            "id": 802,
+            "origin_id": -10,
+            "origin_slot": 1,
+            "target_id": 500,
+            "target_slot": 5,
+            "type": "STRING"
+          },
+          {
+            "id": 903,
+            "origin_id": -10,
+            "origin_slot": 4,
+            "target_id": 500,
+            "target_slot": 6,
+            "type": "INT"
+          },
+          {
+            "id": 804,
+            "origin_id": -10,
+            "origin_slot": 11,
+            "target_id": 500,
+            "target_slot": 7,
+            "type": "INT"
+          },
+          {
+            "id": 902,
+            "origin_id": -10,
+            "origin_slot": 3,
+            "target_id": 500,
+            "target_slot": 8,
+            "type": "BOOLEAN"
+          }
+        ],
+        "extra": {}
+      }
+    ]
+  },
+  "config": {},
+  "extra": {
+    "frontendVersion": "1.55.17",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true,
+    "ue_links": [],
+    "ds": {
+      "scale": 0.4594972986357414,
+      "offset": [
+        610.2975840652844,
+        -1166.527410456521
+      ]
+    }
+  },
+  "extensions": {
+    "seed_widgets": {
+      "481": 0
+    }
+  },
+  "version": 0.4
+}

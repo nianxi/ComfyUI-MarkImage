@@ -1,9 +1,22 @@
+import os
+
 import numpy as np
 import torch
+import comfy.utils
+import folder_paths
 from PIL import Image, ImageDraw
 from typing_extensions import override
 
 from comfy_api.latest import ComfyExtension, io
+from comfy_extras.nodes_upscale_model import ImageUpscaleWithModel, UpscaleModelLoader
+
+from .color_calibrator import ColorCalibratorBlueBox
+from .mask_crop import MarkImageMaskCrop, MarkImagePasteCrop
+from .qwen_cut import CutQwenImage21, _RESOLUTIONS
+
+_bundled_models = os.path.join(os.path.dirname(__file__), "models")
+os.makedirs(_bundled_models, exist_ok=True)
+folder_paths.add_model_folder_path("upscale_models", _bundled_models)
 
 STROKE_WIDTH = 6
 
@@ -230,7 +243,7 @@ class MarkImageGetBox(io.ComfyNode):
     def define_schema(cls):
         return io.Schema(
             node_id="MarkImageGetBox",
-            display_name="标记图像子项",
+            display_name="标记图像-子项",
             category="image",
             description="按索引取出标记数组中一框的全部属性，以及对应遮罩。",
             inputs=[
@@ -296,7 +309,7 @@ class MarkImageToBatch(io.ComfyNode):
             node_id="MarkImageToBatch",
             display_name="标记图像列表转批次",
             category="image",
-            description="把循环输出的图像列表拼成一个批次，供 Inpaint Stitch 使用。",
+            description="把循环输出的图像列表拼成一个批次。",
             is_input_list=True,
             inputs=[
                 io.Image.Input("images", tooltip="来自 End Loop 的图像列表。"),
@@ -400,12 +413,12 @@ class MarkImageBorderColor(io.ComfyNode):
             search_aliases=["border color", "color match", "边缘校色", "偏色"],
             inputs=[
                 io.Image.Input("image", display_name="编辑图", tooltip="Image Edit 输出的裁剪结果。"),
-                io.Image.Input("reference", display_name="裁剪图", tooltip="Inpaint Crop 输出的裁剪原图。"),
+                io.Image.Input("reference", display_name="裁剪图", tooltip="裁切下来的原图。"),
                 io.Mask.Input(
                     "mask",
                     optional=True,
                     display_name="裁剪遮罩",
-                    tooltip="接 Inpaint Crop 的 cropped mask 后，边缘取样会避开要修改的区域。",
+                    tooltip="接上裁切遮罩后，边缘取样会避开要修改的区域。",
                 ),
                 io.Int.Input("border", default=32, min=1, max=256, display_name="边缘宽度"),
                 io.Float.Input("strength", default=1.0, min=0.0, max=1.0, step=0.01, display_name="强度"),
@@ -420,10 +433,155 @@ class MarkImageBorderColor(io.ComfyNode):
         return io.NodeOutput(correct_batch(image, reference, border, strength, mask))
 
 
+def _upscale_model_names():
+    names = folder_paths.get_filename_list("upscale_models")
+    return names or ["realesr-general-x4v3.pth"]
+
+
+def _target_min_side(height, width, min_side):
+    if min(height, width) >= min_side:
+        return height, width
+    if height <= width:
+        return min_side, max(1, int(round(width * (min_side / height))))
+    return max(1, int(round(height * (min_side / width)))), min_side
+
+
+class MarkImageUpscaleMinSide(io.ComfyNode):
+    @classmethod
+    def define_schema(cls):
+        models = _upscale_model_names()
+        default_model = "realesr-general-x4v3.pth" if "realesr-general-x4v3.pth" in models else models[0]
+        return io.Schema(
+            node_id="MarkImageUpscaleMinSide",
+            display_name="标记图像-短边高清",
+            category="image",
+            description="短边小于最小边长时，用放大模型拉到该边长；已经够大则原样通过。",
+            search_aliases=["upscale", "realesrgan", "最小边", "高清"],
+            inputs=[
+                io.Image.Input("image", display_name="图像"),
+                io.Int.Input(
+                    "min_side",
+                    default=576,
+                    min=32,
+                    max=8192,
+                    step=1,
+                    display_name="最小边长",
+                    tooltip="短边低于这个值才放大，放大后短边等于这个值。",
+                ),
+                io.Combo.Input(
+                    "model_name",
+                    options=models,
+                    default=default_model,
+                    display_name="放大模型",
+                ),
+            ],
+            outputs=[
+                io.Image.Output(display_name="图像"),
+            ],
+        )
+
+    @classmethod
+    def execute(cls, image, min_side, model_name) -> io.NodeOutput:
+        height, width = int(image.shape[1]), int(image.shape[2])
+        target_h, target_w = _target_min_side(height, width, int(min_side))
+        if (target_h, target_w) == (height, width):
+            return io.NodeOutput(image)
+
+        upscale_model = UpscaleModelLoader.execute(model_name)[0]
+        current = image
+        for _ in range(4):
+            if min(int(current.shape[1]), int(current.shape[2])) >= min(target_h, target_w):
+                break
+            current = ImageUpscaleWithModel.execute(upscale_model, current)[0]
+
+        if int(current.shape[1]) != target_h or int(current.shape[2]) != target_w:
+            current = comfy.utils.common_upscale(
+                current.movedim(-1, 1), target_w, target_h, "lanczos", "disabled"
+            ).movedim(1, -1)
+        return io.NodeOutput(current)
+
+
+class MarkImageQwenCut(io.ComfyNode):
+    @classmethod
+    def define_schema(cls):
+        return io.Schema(
+            node_id="MarkImageQwenCut",
+            display_name="标记图像 Qwen 裁切",
+            category="image",
+            description="把图像收到 Qwen-Image 2.1 当前分辨率下的不动点尺寸。",
+            inputs=[
+                io.Image.Input("image", display_name="图像"),
+                io.Combo.Input(
+                    "resolution",
+                    options=["default"] + [str(r) for r in _RESOLUTIONS],
+                    default="default",
+                ),
+                io.Float.Input("tol_ratio", default=1.0, min=0.2, max=3.0, step=0.1),
+                io.Combo.Input("mode", options=["crop", "pad", "stretch"], default="crop"),
+                io.Float.Input("pad_color", default=0.0, min=0.0, max=1.0, step=0.01),
+            ],
+            outputs=[
+                io.Image.Output("image", display_name="图像"),
+                io.Int.Output("width"),
+                io.Int.Output("height"),
+                io.Int.Output("resolution"),
+            ],
+        )
+
+    @classmethod
+    def execute(cls, image, resolution, tol_ratio, mode, pad_color) -> io.NodeOutput:
+        return io.NodeOutput(*CutQwenImage21().run(image, resolution, tol_ratio, mode, pad_color))
+
+
+class MarkImageColorCalibrator(io.ComfyNode):
+    @classmethod
+    def define_schema(cls):
+        return io.Schema(
+            node_id="MarkImageColorCalibrator",
+            display_name="标记图像-校色",
+            category="image",
+            description="按两张图的未改区域校正偏色和对比度。",
+            inputs=[
+                io.Image.Input("image_original"),
+                io.Image.Input("image_edited"),
+                io.Mask.Input("mask", optional=True),
+                io.Float.Input("threshold", default=0.08, min=0.0, max=1.0, step=0.01),
+                io.Int.Input("expand", default=48, min=0, max=128, step=1),
+                io.Int.Input("open_k", default=13, min=1, max=81, step=2),
+                io.Int.Input("close_k", default=15, min=1, max=81, step=2),
+                io.Float.Input("strength", default=1.0, min=0.0, max=1.0, step=0.05),
+                io.Combo.Input("outside_mode", options=["edited", "original"], default="edited"),
+                io.Int.Input("feather", default=24, min=0, max=128, step=1),
+            ],
+            outputs=[
+                io.Image.Output("image", display_name="图像"),
+                io.Mask.Output("mask"),
+                io.Float.Output("changed_ratio"),
+            ],
+        )
+
+    @classmethod
+    def execute(cls, image_original, image_edited, threshold, expand, open_k, close_k, strength, outside_mode, feather, mask=None) -> io.NodeOutput:
+        packed = ColorCalibratorBlueBox().run(
+            image_original, image_edited, threshold, expand, open_k, close_k, strength, outside_mode, feather, mask
+        )
+        return io.NodeOutput(*packed["result"], ui=packed["ui"])
+
+
 class MarkImageExtension(ComfyExtension):
     @override
     async def get_node_list(self) -> list[type[io.ComfyNode]]:
-        return [MarkImage, MarkImageGetBox, MarkImageToBatch, MarkImageBorderColor]
+        return [
+            MarkImage,
+            MarkImageGetBox,
+            MarkImageToBatch,
+            MarkImageBorderColor,
+            MarkImageUpscaleMinSide,
+            MarkImageQwenCut,
+            MarkImageColorCalibrator,
+            MarkImageMaskCrop,
+            MarkImagePasteCrop,
+        ]
 
 
 async def comfy_entrypoint() -> MarkImageExtension:
